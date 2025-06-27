@@ -98,13 +98,13 @@ export default function Header() {
               <div className="pt-4 border-t">
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-3">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+(251) 911389796</span>
                 </div>
                 <Button 
                   onClick={() => scrollToSection('contact')}
                   className="w-full bg-[#FFD700] hover:bg-[#FFA000] text-[#1A237E] font-semibold"
                 >
-                  Get Quote
+                  Contact Us
                 </Button>
               </div>
             </nav>
