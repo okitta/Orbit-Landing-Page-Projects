@@ -129,7 +129,7 @@ export default function ProductsSection() {
                         className="w-full bg-[#6A1B9A] hover:bg-[#8E24AA] text-white transition-colors duration-300"
                         onClick={() => window.open('https://t.me/teyimstore', '_blank')}
                       >
-                        👉 Buy Now
+                        Buy Now
                       </Button>
                     </CardContent>
                   </Card>

@@ -96,7 +96,7 @@ export default function HeroSection() {
           
           <Button 
             size="lg" 
-            onClick={() => scrollToSection('products')}
+            onClick={() => window.open('https://t.me/teyimstore', '_blank')}
             className="bg-[#FFD700] hover:bg-[#FFA000] text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Shop Now
