@@ -56,7 +56,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center bg-[#6A1B9A] overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-[#6A1B9A] overflow-hidden">
       {/* Bubbles */}
       {bubbles.map(bubble => (
         <div
@@ -81,22 +81,22 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="max-w-2xl ml-0">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight text-white">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight text-white">
             Wear Confidence.
-            <span className="block text-[#FFD700]">
+            <span className="block text-[#FFD700] mt-2">
               Crafted by Teyim
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 leading-relaxed max-w-xl sm:max-w-2xl">
             Premium fashion for every body type - from casual classic to bold pieces made with love in Ethiopia.
           </p>
           
           <Button 
             size="lg" 
-            onClick={() => window.open('https://t.me/teyimstore', '_blank')}
+            onClick={() => window.open('https://t.me/teyimgarment', '_blank')}
             className="bg-[#FFD700] hover:bg-[#FFA000] text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Shop Now

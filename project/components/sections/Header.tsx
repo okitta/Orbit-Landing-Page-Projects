@@ -61,13 +61,13 @@ export default function Header() {
               isScrolled ? 'text-gray-600' : 'text-white/90'
             }`}>
               <Phone className="w-4 h-4" />
-              <span>+1 (555) 123-4567</span>
+              <span>+(251) 911389796 </span>
             </div>
             <Button 
               onClick={() => scrollToSection('contact')}
               className="bg-[#FFD700] hover:bg-[#FFA000] text-[#1A237E] font-semibold px-6"
             >
-              Get Quote
+              Contact Us
             </Button>
           </div>
 
