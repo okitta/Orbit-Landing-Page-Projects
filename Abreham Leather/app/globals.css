@@ -1,0 +1,83 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 220 13% 71%;
+    --foreground: 0 0% 0%;
+    --card: 220 13% 71%;
+    --card-foreground: 0 0% 0%;
+    --popover: 220 13% 71%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 220 13% 71%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 42 97% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 32 96% 43%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 25 96% 28%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 220 13% 71%;
+    --chart-2: 42 97% 42%;
+    --chart-3: 32 96% 43%;
+    --chart-4: 25 96% 28%;
+    --chart-5: 19 31% 47%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 19 31% 47%;
+    --foreground: 220 13% 71%;
+    --card: 19 31% 47%;
+    --card-foreground: 220 13% 71%;
+    --popover: 19 31% 47%;
+    --popover-foreground: 220 13% 71%;
+    --primary: 220 13% 71%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 42 97% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 32 96% 43%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 25 96% 28%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 8% 71%;
+    --chart-2: 35 98% 42%;
+    --chart-3: 32 98% 43%;
+    --chart-4: 25 96% 28%;
+    --chart-5: 19 31% 47%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
