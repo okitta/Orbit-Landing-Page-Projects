@@ -6,8 +6,8 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Teyim Garment - Premium Ethiopian Fashion',
-  description: 'Discover our collection of stylish, comfortable clothing made with love in Ethiopia. From casual classics to bold statement pieces for every body type.'
+  title: 'Maritu Honey - Pure Ethiopian Honey',
+  description: 'Experience the finest natural honey from Ethiopia. Our premium honey products are ethically sourced and carefully harvested to bring you the authentic taste of Ethiopian beekeeping.'
 };
 
 export default function RootLayout({

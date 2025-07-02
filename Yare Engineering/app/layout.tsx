@@ -6,8 +6,8 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Teyim Garment - Premium Ethiopian Fashion',
-  description: 'Discover our collection of stylish, comfortable clothing made with love in Ethiopia. From casual classics to bold statement pieces for every body type.'
+  title: 'Yared Engineering - Professional Engineering Services',
+  description: 'Expert engineering solutions and consultancy services. Specializing in mechanical, electrical and industrial engineering projects with proven excellence.',
 };
 
 export default function RootLayout({
