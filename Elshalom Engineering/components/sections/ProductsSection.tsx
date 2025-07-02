@@ -7,7 +7,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Product {
   name: string;
-  price: string;
   description: string;
   image: string;
 }
@@ -18,33 +17,28 @@ export default function ProductsSection() {
   const products: Product[] = [
     {
       name: 'Industrial Machinery',
-      price: 'Custom Quote',
       description: 'Heavy-duty industrial equipment for manufacturing and production facilities.',
-      image: '/image/machinery_1.jpg'
+      image: '/image/product_1.jpg'
     },
     {
       name: 'HVAC Systems',
-      price: 'Custom Quote',
       description: 'Energy-efficient heating, ventilation and air conditioning solutions.',
-      image: '/image/hvac_1.jpg'
+      image: '/image/product_2.jpg'
     },
     {
       name: 'Electrical Installations',
-      price: 'Custom Quote',
       description: 'Commercial and industrial electrical systems design and installation.',
-      image: '/image/electrical_1.jpg'
+      image: '/image/product_3.jpg'
     },
     {
       name: 'Plumbing Systems',
-      price: 'Custom Quote',
       description: 'Advanced plumbing solutions for commercial buildings.',
-      image: '/image/plumbing_1.jpg'
+      image: '/image/product_4.jpg'
     },
     {
       name: 'Construction Equipment',
-      price: 'Custom Quote',
       description: 'Heavy construction machinery for building projects.',
-      image: '/image/construction_1.jpg'
+      image: '/image/product_5.jpg'
     }
   ];
 
@@ -90,9 +84,8 @@ export default function ProductsSection() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <div className="flex justify-between items-start mb-4">
+                      <div className="flex justify-center items-center mb-4">
                         <h3 className="text-xl font-semibold text-primary">{product.name}</h3>
-                        <span className="text-lg font-bold text-accent">{product.price}</span>
                       </div>
                       <p className="text-gray-600 mb-6">{product.description}</p>
                       <Button 
