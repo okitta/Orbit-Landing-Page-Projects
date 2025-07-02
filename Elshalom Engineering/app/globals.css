@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* White Smoke #F4F4F9 */
+    --foreground: 200 100% 5%; /* Slate Gray #264653 for text */
+    --card: 0 0% 100%;
+    --card-foreground: 200 100% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 100% 5%;
+    --primary: 186 100% 24%; /* Deep Teal #006D77 */
+    --primary-foreground: 45 100% 50%; /* Bright Orange #FFB703 for contrast */
+    --secondary: 207 37% 45%; /* Steel Blue #457B9D */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 198 15% 80%; /* Light Slate Gray */
+    --muted-foreground: 200 15% 40%;
+    --accent: 45 100% 50%; /* Bright Orange #FFB703 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 15% 80%;
+    --input: 200 15% 80%;
+    --ring: 186 100% 24%;
+    --chart-1: 186 100% 24%; /* Deep Teal */
+    --chart-2: 45 100% 50%; /* Bright Orange */
+    --chart-3: 207 37% 45%; /* Steel Blue */
+    --chart-4: 200 15% 80%; /* Light Slate Gray */
+    --chart-5: 200 100% 5%; /* Slate Gray */
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 200 100% 5%; /* Slate Gray #264653 */
+    --foreground: 0 0% 98%; /* White Smoke #F4F4F9 */
+    --card: 200 100% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 200 100% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 186 100% 24%; /* Deep Teal #006D77 */
+    --primary-foreground: 45 100% 50%; /* Bright Orange #FFB703 */
+    --secondary: 207 37% 45%; /* Steel Blue #457B9D */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 200 15% 20%;
+    --muted-foreground: 0 0% 98%;
+    --accent: 45 100% 50%; /* Bright Orange #FFB703 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 15% 20%;
+    --input: 200 15% 20%;
+    --ring: 186 100% 24%;
+    --chart-1: 186 100% 24%;
+    --chart-2: 45 100% 50%;
+    --chart-3: 207 37% 45%;
+    --chart-4: 200 15% 20%;
+    --chart-5: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
