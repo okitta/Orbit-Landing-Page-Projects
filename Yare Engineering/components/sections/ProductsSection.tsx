@@ -97,7 +97,9 @@ export default function ProductsSection() {
                       <p className="text-gray-600 mb-6">{product.description}</p>
                       <Button 
                         className="w-full bg-steelBlue hover:bg-charcoal text-white transition-colors duration-300"
-                        onClick={() => scrollToSection('contact')}
+                        onClick={() => {
+                          window.open('https://t.me/YaredEngineering', '_blank');
+                        }}
                       >
                         Order Now
                       </Button>
