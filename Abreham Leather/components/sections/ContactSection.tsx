@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, Facebook, Send, Film } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
@@ -21,8 +21,6 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const { toast } = useToast();
-
-
 
   const validateField = (name: string, value: string) => {
     switch (name) {
@@ -131,9 +129,8 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { name: "Instagram", url: "https://instagram.com/abrishleather", icon: <Instagram className="w-5 h-5" /> },
-    { name: "Facebook", url: "https://facebook.com/abrishleather", icon: <Facebook className="w-5 h-5" /> },
-    { name: "Tiktok", url: "https://tiktok.com/@abrishleather", icon: <Send className="w-5 h-5" /> },
+    { name: "Tiktok", url: "https://tiktok.com/@abrishleather", icon: <Film className="w-5 h-5" /> },
+    { name: "Facebook", url: "https://facebook.com/abrishleatherproduct", icon: <Facebook className="w-5 h-5" /> },
     { name: "Telegram", url: "https://t.me/abrishleather", icon: <Send className="w-5 h-5" /> }
   ];
 

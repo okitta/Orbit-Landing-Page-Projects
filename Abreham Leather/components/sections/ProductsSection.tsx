@@ -7,7 +7,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Product {
   name: string;
-  price: string;
   description: string;
   image: string;
 }
@@ -18,37 +17,31 @@ export default function ProductsSection() {
   const products: Product[] = [
     {
       name: 'Premium Leather Handbag',
-      price: '4,000 ETB',
       description: 'Elegant and spacious, our leather handbags are perfect for everyday essentials with a touch of luxury.',
       image: '/image/product_1.jpg'
     },
     {
       name: "Men's Premium Leather Bags",
-      price: '5,000 ETB',
       description: 'Rugged and refined, this backpack balances function and form for the modern man on the move.',
       image: '/image/product_2.jpg'
     },
     {
       name: 'Laptop Bag',
-      price: '4,000 ETB',
       description: 'Sleek and structured leather laptop bag built for professionals who value both protection and presentation.',
       image: '/image/product_3.jpg'
     },
     {
       name: "Women's Premium Leather Handbags",
-      price: '4,000 ETB',
       description: "Elegant, flowy, stylish and practical, this women's hand bag is the perfect grab-and-go companion for any outing.",
       image: '/image/product_4.jpg'
     },
     {
       name: 'Leather Sandals',
-      price: '1,500 ETB',
       description: 'Handcrafted from genuine leather, our sandals offer a perfect blend of comfort, durability, and style — made for both men and women.',
       image: '/image/product_5.jpg'
     },
     {
       name: 'Leather Sandals',
-      price: '1,500 ETB',
       description: 'Handcrafted from genuine leather, our sandals offer a perfect blend of comfort, durability, and style — made for both men and women.',
       image: '/image/product_7.jpg'
     }
@@ -91,7 +84,6 @@ export default function ProductsSection() {
       // Push a dummy object with unique key, but type Product
       visible.push({
         name: '',
-        price: '',
         description: '',
         image: '',
         // Optionally, add a special property to identify as placeholder if needed
@@ -139,9 +131,8 @@ export default function ProductsSection() {
                         />
                       </div>
                       <CardContent className="p-4 sm:p-6 flex flex-col flex-1">
-                        <div className="flex justify-between items-start mb-2 sm:mb-4">
+                        <div className="flex justify-center items-start mb-2 sm:mb-4">
                           <h3 className="text-lg sm:text-xl font-semibold text-leather-brown">{product.name}</h3>
-                          <span className="text-base sm:text-lg font-bold text-leather-secondary">{product.price}</span>
                         </div>
                         <p className="text-leather-secondary mb-4 sm:mb-6 flex-1 text-sm sm:text-base">{product.description}</p>
                         <Button 

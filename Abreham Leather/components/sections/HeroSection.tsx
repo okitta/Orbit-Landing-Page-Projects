@@ -56,7 +56,12 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-gradient-to-br from-leather-brown via-leather-neutral to-leather-secondary overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center overflow-hidden">
+      {/* Background image with gradient overlay */}
+      <div className="absolute inset-0 w-full h-full">
+        <img src="/image/background.png" alt="Abrish Leather Hero" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-br from-leather-brown/90 via-leather-neutral/80 to-leather-secondary/80" />
+      </div>
       {/* Bubbles */}
       {bubbles.map(bubble => (
         <div
@@ -71,8 +76,7 @@ export default function HeroSection() {
           }}
         />
       ))}
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20 flex flex-col items-start justify-center text-left w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20 flex-1 flex flex-col items-start justify-center text-left w-full">
         <div className="max-w-2xl ml-0 w-full">
           <div className="mb-4 flex items-center gap-3">
             {/* Minimalist leather bag icon using Lucide icon, hidden on mobile */}
@@ -81,7 +85,7 @@ export default function HeroSection() {
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight tracking-tight text-leather-primary">
             Where Craftsmanship Meets Style.
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-2xl mb-4 sm:mb-6 md:mb-8 text-leather-primary/90 leading-relaxed max-w-xl sm:max-w-2xl">
+          <p className="hidden sm:block text-sm sm:text-base md:text-lg lg:text-2xl mb-4 sm:mb-6 md:mb-8 text-leather-primary/90 leading-relaxed max-w-xl sm:max-w-2xl">
             Explore our exclusive collection of original leather hand and backpacks for men and women — made to last and designed to stand out. Crafted in Ethiopia with premium quality and timeless design.
           </p>
           <Button 

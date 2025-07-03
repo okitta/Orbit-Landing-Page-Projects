@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Instagram, Facebook, Send, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Send, MapPin, Phone, Mail, Film } from 'lucide-react';
 
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();
@@ -28,16 +28,16 @@ export default function FooterSection() {
     {
       title: 'Contact',
       links: [
-        { name: 'Merkato Leather District', href: '#', icon: <MapPin className="w-4 h-4" /> },
-        { name: 'Addis Ababa, Ethiopia', href: '#', icon: <MapPin className="w-4 h-4" /> },
-        { name: '+251 911 234 567', href: 'tel:+251911234567', icon: <Phone className="w-4 h-4" /> },
+        { name: 'Hawassa beside Addis ketema highschool', href: '#', icon: <MapPin className="w-4 h-4" /> },
+        { name: 'Hawassa, Ethiopia', href: '#', icon: <MapPin className="w-4 h-4" /> },
+        { name: '+251 916 866 084', href: 'tel:+251916866084', icon: <Phone className="w-4 h-4" /> },
         { name: 'contact@abrehamleather.com', href: 'mailto:contact@abrehamleather.com', icon: <Mail className="w-4 h-4" /> }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'Instagram', href: 'https://instagram.com/abrehamleather', icon: <Instagram className="w-5 h-5" /> },
+    { name: 'TikTok', href: 'https://instagram.com/abrehamleather', icon: <Film className="w-5 h-5" /> },
     { name: 'Facebook', href: 'https://facebook.com/abrehamleather', icon: <Facebook className="w-5 h-5" /> },
     { name: 'Telegram', href: 'https://t.me/abrehamleather', icon: <Send className="w-5 h-5" /> }
   ];
