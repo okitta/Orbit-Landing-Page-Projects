@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Product {
   name: string;
+  price: string;
   description: string;
   image: string;
 }
@@ -16,29 +17,46 @@ export default function ProductsSection() {
 
   const products: Product[] = [
     {
-      name: 'Industrial Machinery',
-      description: 'Heavy-duty industrial equipment for manufacturing and production facilities.',
+      name: 'Coffee Grinder Machine',
+      price: '',
+      description: 'Efficient grinding with consistent quality, designed to support large-volume coffee producers.',
       image: '/image/product_1.jpg'
     },
     {
-      name: 'HVAC Systems',
-      description: 'Energy-efficient heating, ventilation and air conditioning solutions.',
+      name: 'Bread Kneading Machine',
+      price: '',
+      description: 'Mixes dough evenly and powerfully for commercial bakeries and local enterprises.',
       image: '/image/product_2.jpg'
     },
     {
-      name: 'Electrical Installations',
-      description: 'Commercial and industrial electrical systems design and installation.',
+      name: 'Bread Dough Rising Machine',
+      price: '',
+      description: 'Automated temperature and humidity control for perfect dough proofing every time.',
       image: '/image/product_3.jpg'
     },
     {
-      name: 'Plumbing Systems',
-      description: 'Advanced plumbing solutions for commercial buildings.',
+      name: 'Grain Sorting (Classifier) Machine',
+      price: '',
+      description: 'Sorts and grades grains with high precision, increasing quality and value.',
       image: '/image/product_4.jpg'
     },
     {
-      name: 'Construction Equipment',
-      description: 'Heavy construction machinery for building projects.',
+      name: 'Manure Composting Machine',
+      price: '',
+      description: 'Transforms animal waste into rich, usable compost—eco-friendly and farm-ready.',
       image: '/image/product_5.jpg'
+    },
+    {
+      name: 'Hand Tractor',
+      price: '',
+      description: 'Versatile and compact — ideal for plowing, tilling, and preparing small farmlands.',
+      image: '/image/product_6.jpg'
+    },
+    {
+      name: 'Butter Maker Machine',
+      price: '',
+      description: 'Produces smooth, high-quality butter with hygiene-focused, food-grade components.',
+      image: '/image/product_7.jpg'
     }
   ];
 
@@ -61,7 +79,7 @@ export default function ProductsSection() {
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             Our Engineering Solutions
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-secondary max-w-3xl mx-auto">
             Comprehensive engineering services and equipment for industrial and commercial applications.
           </p>
         </div>
@@ -84,15 +102,16 @@ export default function ProductsSection() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <div className="flex justify-center items-center mb-4">
+                      <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-semibold text-primary">{product.name}</h3>
+                        <span className="text-lg font-bold text-secondary">{product.price}</span>
                       </div>
-                      <p className="text-gray-600 mb-6">{product.description}</p>
+                      <p className="text-secondary mb-6">{product.description}</p>
                       <Button 
-                        className="w-full bg-accent hover:bg-accent/80 text-primary font-semibold transition-colors duration-300"
+                        className="w-full bg-primary hover:bg-primary/80 text-white font-semibold transition-colors duration-300"
                         onClick={() => window.open('https://t.me/elshalomengineering', '_blank')}
                       >
-                      Buy Now
+                        Order Now
                       </Button>
                     </CardContent>
                   </Card>

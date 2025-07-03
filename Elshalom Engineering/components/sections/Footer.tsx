@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, ArrowUp, Film, Send } from 'lucide-react';
 
 export default function Footer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -91,7 +91,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-accent mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   Elshalom Engineering
                 </h3>
                 <p className="text-white/80 leading-relaxed">
@@ -102,29 +102,31 @@ export default function Footer() {
               {/* Social Media */}
               <div className="flex gap-4">
                 {[
-                  { icon: Facebook, href: '#' },
-                  { icon: Twitter, href: '#' },
-                  { icon: Instagram, href: '#' },
-                  { icon: Linkedin, href: '#' }
-                ].map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300"
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
+                    { name: "TikTok", href: "https://www.tiktok.com/@elshalomengineering", icon: Film },
+                    { name: "Facebook", href: "https://web.facebook.com/profile.php?id=100063891852112", icon: Facebook },
+                    { name: "Telegram", href: "https://t.me/GashawEdeo0911763219or0921765465", icon: Send }
+                ].map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={social.href}
+                      className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300"
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-accent">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
                 {['About Us', 'Services', 'Portfolio', 'Contact', 'Blog', 'Careers'].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-white/80 hover:text-accent transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-primary transition-colors duration-300">
                       {link}
                     </a>
                   </li>
@@ -134,11 +136,11 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-accent">Product Categories</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Product Categories</h4>
               <ul className="space-y-3">
                 {['Coffee Grinder Machine', 'Bread Kneading Machine', 'Bread Dough Rising Machine', 'Brewing Machine','Butter Maker Machine','Hand Tractor','Manure Composting Machine'].map((service) => (
                   <li key={service}>
-                    <a href="#" className="text-white/80 hover:text-accent transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-primary transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -148,7 +150,7 @@ export default function Footer() {
 
             {/* Newsletter */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-accent">Stay Updated</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Stay Updated</h4>
               <p className="text-white/80 mb-4">
                 Subscribe to our newsletter for the latest updates and insights.
               </p>
@@ -158,7 +160,7 @@ export default function Footer() {
                   placeholder="Enter your email"
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-accent"
                 />
-                <Button className="w-full bg-accent hover:bg-accent/80 text-primary font-semibold">
+                <Button className="w-full bg-white hover:bg-primary/10 text-primary font-semibold">
                   Subscribe
                 </Button>
               </div>
@@ -174,13 +176,13 @@ export default function Footer() {
             </p>
             
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-accent transition-colors">
+              <a href="#" className="text-white/60 hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-white/60 hover:text-accent transition-colors">
+              <a href="#" className="text-white/60 hover:text-primary transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-white/60 hover:text-accent transition-colors">
+              <a href="#" className="text-white/60 hover:text-primary transition-colors">
                 Cookie Policy
               </a>
             </div>
@@ -191,7 +193,7 @@ export default function Footer() {
       {/* Scroll to Top Button */}
       <Button
         onClick={scrollToTop}
-        className="fixed bottom-6 left-6 w-12 h-12 bg-accent hover:bg-accent/80 text-primary rounded-full shadow-lg z-50"
+        className="fixed bottom-6 left-6 w-12 h-12 bg-white hover:bg-primary/10 text-primary rounded-full shadow-lg z-50"
         size="icon"
       >
         <ArrowUp className="w-5 h-5" />

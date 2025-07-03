@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Send, Film } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
@@ -131,9 +131,9 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { name: "Instagram", url: "https://instagram.com/elshalomengineering", icon: <Instagram className="w-5 h-5" /> },
-    { name: "Facebook", url: "https://facebook.com/elshalomengineering", icon: <Facebook className="w-5 h-5" /> },
-    { name: "Telegram", url: "https://t.me/elshalomengineering", icon: <Send className="w-5 h-5" /> }
+    { name: "TikTok", url: "https://www.tiktok.com/@elshalomengineering", icon: <Film className="w-5 h-5" /> },
+    { name: "Facebook", url: "https://web.facebook.com/profile.php?id=100063891852112", icon: <Facebook className="w-5 h-5" /> },
+    { name: "Telegram", url: "https://t.me/GashawEdeo0911763219or0921765465", icon: <Send className="w-5 h-5" /> }
   ];
 
   return (
@@ -141,7 +141,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Let's Stay Connected</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-secondary max-w-2xl mx-auto">
             Got a question, custom order, or want to learn more about our collection? We'd love to hear from you.
           </p>
         </div>
@@ -214,7 +214,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-accent hover:bg-accent/80 text-primary font-semibold"
+                  className="w-full bg-primary hover:bg-primary/80 text-white font-semibold"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <MessageCircle className="ml-2 w-4 h-4" />
@@ -234,7 +234,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-primary mb-1">{info.title}</h4>
-                    <ul className="text-gray-600 text-base">
+                    <ul className="text-secondary text-base">
                       {info.details.map((detail, i) => (
                         <li key={i}>{detail}</li>
                       ))}
@@ -255,7 +255,7 @@ export default function ContactSection() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300"
+                      className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
                     >
                       {link.icon}
                     </a>

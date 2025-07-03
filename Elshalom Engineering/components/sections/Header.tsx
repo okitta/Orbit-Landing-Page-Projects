@@ -34,7 +34,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-primary' : 'text-white'
+              isScrolled ? 'text-secondary' : 'text-white'
             }`}>
               Elshalom Engineering
             </h1>
@@ -46,8 +46,8 @@ export default function Header() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className={`font-medium transition-colors duration-300 hover:text-accent ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
+                className={`font-medium transition-colors duration-300 hover:text-primary ${
+                  isScrolled ? 'text-secondary' : 'text-white'
                 }`}
               >
                 {item}
@@ -61,11 +61,11 @@ export default function Header() {
               isScrolled ? 'text-gray-600' : 'text-white/90'
             }`}>
               <Phone className="w-4 h-4" />
-              <span>+(251) 911389796 </span>
+              <span>+(251) 911763219 </span>
             </div>
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-accent hover:bg-accent/80 text-primary font-semibold px-6"
+              className="bg-primary hover:bg-primary/80 text-white font-semibold px-6"
             >
               Contact Us
             </Button>
@@ -90,7 +90,7 @@ export default function Header() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left font-medium text-gray-700 hover:text-accent transition-colors"
+                  className="block w-full text-left font-medium text-secondary hover:text-primary transition-colors"
                 >
                   {item}
                 </button>
@@ -98,11 +98,11 @@ export default function Header() {
               <div className="pt-4 border-t">
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-3">
                   <Phone className="w-4 h-4" />
-                  <span>+(251) 911389796</span>
+                  <span>+(251) 911763219</span>
                 </div>
                 <Button 
                   onClick={() => scrollToSection('contact')}
-                  className="w-full bg-accent hover:bg-accent/80 text-primary font-semibold"
+                  className="w-full bg-primary hover:bg-primary/80 text-white font-semibold"
                 >
                   Contact Us
                 </Button>

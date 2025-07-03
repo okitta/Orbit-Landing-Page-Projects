@@ -45,7 +45,7 @@ export default function AboutSection() {
                 alt="Elshalom Engineering Workshop" 
                 className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-full opacity-10 animate-pulse delay-1000"></div>
             </div>
           </div>
