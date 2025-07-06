@@ -56,7 +56,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-brand-auraIndigo overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-primary overflow-hidden">
       {/* Bubbles */}
       {bubbles.map(bubble => (
         <div
@@ -75,7 +75,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/image/background.png"
+          src="/image/background.jpg"
           alt="Background"
           className="w-full h-full object-cover opacity-40"
         />
@@ -86,7 +86,7 @@ export default function HeroSection() {
           <div className="flex items-center mb-4 sm:mb-6">
             {/* Icon: Paintbrush + T-shirt + Print Roller */}
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white pt-20 sm:pt-0">
-              Creative Apparel. <span className="block text-brand-dillGreen mt-2">Bold Impressions.</span>
+              Creative Apparel. <span className="block text-white mt-2">Bold Impressions.</span>
             </h1>
           </div>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 leading-relaxed max-w-xl sm:max-w-2xl">
@@ -95,10 +95,9 @@ export default function HeroSection() {
           <Button 
             size="lg" 
             onClick={() => scrollToSection('services')}
-            className="bg-brand-alpineOat hover:bg-brand-dillGreen text-brand-auraIndigo font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white hover:bg-white/90 text-primary font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Explore Services
-            <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>
       </div>

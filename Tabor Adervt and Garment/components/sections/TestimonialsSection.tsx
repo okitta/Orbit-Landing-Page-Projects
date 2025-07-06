@@ -68,22 +68,22 @@ export default function TestimonialsSection() {
     return Array.from({ length: 5 }, (_, index) => (
       <Star
         key={index}
-        className={`w-5 h-5 ${index < rating ? 'fill-brand-dillGreen text-brand-dillGreen' : 'text-brand-auraIndigo/20'}`}
+        className={`w-5 h-5 ${index < rating ? 'fill-primary text-primary' : 'text-primary/20'}`}
       />
     ));
   };
 
   return (
-    <section className="py-32 bg-brand-alpineOat relative overflow-hidden">
+    <section className="py-32 bg-primary/10 relative overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-electricBlue/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-brand-auraIndigo mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-brand-auraIndigo/80 max-w-3xl mx-auto">
+          <p className="text-lg text-primary/80 max-w-3xl mx-auto">
             Trusted by hundreds—here's why our customers keep coming back.
           </p>
         </div>
@@ -95,9 +95,9 @@ export default function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={prevTestimonial}
-              className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-brand-dillGreen transition-all duration-300 hover:scale-105"
+              className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-primary transition-all duration-300 hover:scale-105"
             >
-              <ChevronLeft className="h-6 w-6 text-brand-auraIndigo" />
+              <ChevronLeft className="h-6 w-6 text-primary" />
             </Button>
           </div>
 
@@ -106,17 +106,17 @@ export default function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={nextTestimonial}
-              className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-brand-dillGreen transition-all duration-300 hover:scale-105"
+              className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-primary transition-all duration-300 hover:scale-105"
             >
-              <ChevronRight className="h-6 w-6 text-brand-auraIndigo" />
+              <ChevronRight className="h-6 w-6 text-primary" />
             </Button>
           </div>
 
           {/* Main Testimonial Card */}
-          <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-brand-auraIndigo/10 shadow-xl max-w-3xl mx-auto transform-gpu transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
+          <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-primary/10 shadow-xl max-w-3xl mx-auto transform-gpu transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
             <CardContent className="p-8">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-brand-dillGreen/20">
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-primary/20">
                   <img
                     src={testimonials[currentTestimonial].image}
                     alt={testimonials[currentTestimonial].name}
@@ -124,10 +124,10 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div className="flex gap-1 mb-4">{renderStars(testimonials[currentTestimonial].rating)}</div>
-                <blockquote className="text-xl text-brand-auraIndigo/80 italic mb-6">
+                <blockquote className="text-xl text-primary/80 italic mb-6">
                   "{testimonials[currentTestimonial].text}"
                 </blockquote>
-                <cite className="text-brand-auraIndigo font-semibold not-italic">
+                <cite className="text-primary font-semibold not-italic">
                   — {testimonials[currentTestimonial].name}
                 </cite>
               </div>
@@ -148,7 +148,7 @@ export default function TestimonialsSection() {
               <button
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-brand-auraIndigo w-6' : 'bg-brand-auraIndigo/20 hover:bg-brand-dillGreen/40'}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-primary w-6' : 'bg-primary/20 hover:bg-primary/40'}`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}

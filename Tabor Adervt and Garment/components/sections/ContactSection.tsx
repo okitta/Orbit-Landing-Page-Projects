@@ -6,9 +6,16 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, Facebook, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
+
+// TikTok icon component
+const TikTokIcon = () => (
+  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -132,17 +139,17 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { name: "Instagram", url: "https://instagram.com/teyimgarment", icon: <Instagram className="w-5 h-5" /> },
-    { name: "Facebook", url: "https://facebook.com/teyimgarment", icon: <Facebook className="w-5 h-5" /> },
-    { name: "Telegram", url: "https://t.me/teyimgarment", icon: <Send className="w-5 h-5" /> }
+    { name: "TikTok", url: "https://www.tiktok.com/@taboradvert?", icon: <TikTokIcon /> },
+    { name: "Facebook", url: "https://web.facebook.com/profile.php?id=100070440477160", icon: <Facebook className="w-5 h-5" /> },
+    { name: "Telegram", url: "https://t.me/taboradvert", icon: <Send className="w-5 h-5" /> }
   ];
 
   return (
-    <section className="py-24 bg-brand-alpineOat relative overflow-hidden">
+    <section className="py-24 bg-primary/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-brand-auraIndigo mb-6">Let's Build Something Bold Together.</h2>
-          <p className="text-lg text-brand-auraIndigo/80 max-w-2xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Let's Build Something Bold Together.</h2>
+          <p className="text-lg text-primary/80 max-w-2xl mx-auto">
             Got a project or an idea? We're here to help bring it to life. Whether it's apparel, gifts, or custom printing, drop us a message and let's get started.
           </p>
         </div>
@@ -150,7 +157,7 @@ export default function ContactSection() {
           {/* Contact Form */}
           <Card className="w-full shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-brand-auraIndigo">Start Your Project</CardTitle>
+              <CardTitle className="text-2xl font-bold text-primary">Start Your Project</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -163,7 +170,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'name' ? 'border-brand-auraIndigo' : 'border-gray-200'}`}
+                    className={`border-2 ${focusedField === 'name' ? 'border-primary' : 'border-gray-200'}`}
                   />
                   {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                 </div>
@@ -177,7 +184,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'email' ? 'border-brand-auraIndigo' : 'border-gray-200'}`}
+                    className={`border-2 ${focusedField === 'email' ? 'border-primary' : 'border-gray-200'}`}
                   />
                   {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                 </div>
@@ -190,7 +197,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('phone')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'phone' ? 'border-brand-auraIndigo' : 'border-gray-200'}`}
+                    className={`border-2 ${focusedField === 'phone' ? 'border-primary' : 'border-gray-200'}`}
                   />
                   {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
                 </div>
@@ -203,13 +210,13 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'message' ? 'border-brand-auraIndigo' : 'border-gray-200'}`}
+                    className={`border-2 ${focusedField === 'message' ? 'border-primary' : 'border-gray-200'}`}
                   />
                   {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-brand-auraIndigo hover:bg-brand-dillGreen text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -220,18 +227,18 @@ export default function ContactSection() {
           {/* Contact Info */}
           <Card className="w-full shadow-lg bg-white">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-brand-auraIndigo">Contact Information</CardTitle>
+              <CardTitle className="text-2xl font-bold text-primary">Contact Information</CardTitle>
             </CardHeader>
             <CardContent className="space-y-8">
               {contactInfo.map((info, idx) => (
                 <div key={idx} className="flex items-start gap-4">
-                  <div className="bg-brand-dillGreen text-white rounded-full p-2 flex items-center justify-center">
+                  <div className="bg-primary text-white rounded-full p-2 flex items-center justify-center">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-brand-auraIndigo mb-1">{info.title}</h4>
+                    <h4 className="font-semibold text-primary mb-1">{info.title}</h4>
                     {info.details.map((detail, i) => (
-                      <p key={i} className="text-brand-auraIndigo/80 text-sm">{detail}</p>
+                      <p key={i} className="text-primary/80 text-sm">{detail}</p>
                     ))}
                   </div>
                 </div>
@@ -243,7 +250,7 @@ export default function ContactSection() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-brand-auraIndigo text-white rounded-full flex items-center justify-center hover:bg-brand-dillGreen transition-all duration-300"
+                    className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/90 transition-all duration-300"
                   >
                     {social.icon}
                   </a>

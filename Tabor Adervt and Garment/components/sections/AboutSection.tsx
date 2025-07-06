@@ -26,7 +26,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-32 bg-brand-alpineOat relative">
+    <section className="py-32 bg-primary/10 relative">
       {/* Dot Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -41,7 +41,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative max-w-lg mx-auto lg:mx-0">
               <img 
-                src="/image/background.png" 
+                src="/image/about.jpg" 
                 alt="Teyim Garment Workshop" 
                 className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
@@ -53,10 +53,10 @@ export default function AboutSection() {
           {/* Right: Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-brand-auraIndigo mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
                 More Than Just Prints—We Build Brands.
               </h2>
-              <p className="text-lg text-brand-auraIndigo/80 leading-relaxed mb-8">
+              <p className="text-lg text-primary/80 leading-relaxed mb-8">
                 Tabor Advert is a full-service apparel and print production company based in [insert location]. With a strong foothold in garment creation and modern printing technology, we're your one-stop partner for bringing bold ideas to life. Whether it's custom t-shirts, banners, or branded gift products—we deliver quality that wears well and speaks louder.<br/><br/>
                 We take pride in our dedicated Garment House, where creativity meets craftsmanship to produce custom shirts and jerseys tailored for businesses, events, and individuals who value uniqueness.
               </p>

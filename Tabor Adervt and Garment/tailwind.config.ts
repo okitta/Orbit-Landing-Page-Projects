@@ -61,9 +61,30 @@ const config: Config = {
           '5': 'hsl(var(--chart-5))',
         },
         brand: {
-          alpineOat: '#E7D8C9',
-          dillGreen: '#A3C585',
-          auraIndigo: '#6C5B7B',
+          // Primary Yellow - Warm and inviting
+          primaryYellow: '#FFD700',
+          // Secondary Yellow - Softer, more elegant
+          secondaryYellow: '#F4E4BC',
+          // Accent Yellow - Bright and energetic
+          accentYellow: '#FFA500',
+          // Dark Yellow - Rich and sophisticated
+          darkYellow: '#B8860B',
+          
+          // Primary Black - Deep and professional
+          primaryBlack: '#1A1A1A',
+          // Secondary Black - Softer black for text
+          secondaryBlack: '#2D2D2D',
+          // Light Black - For subtle backgrounds
+          lightBlack: '#404040',
+          
+          // Pure White - Clean and crisp
+          pureWhite: '#FFFFFF',
+          // Off White - Warmer, more inviting
+          offWhite: '#F8F8F8',
+          // Cream White - Soft and elegant
+          creamWhite: '#F5F5DC',
+          // Pearl White - Subtle and sophisticated
+          pearlWhite: '#F0F0F0',
         },
       },
       keyframes: {
