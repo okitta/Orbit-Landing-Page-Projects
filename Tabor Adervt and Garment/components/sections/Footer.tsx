@@ -163,9 +163,9 @@ export default function Footer() {
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-primary/10 border-primary/20 text-primary placeholder:text-primary/60 focus:border-accent"
+                  className="bg-primary/10 border-black text-black placeholder:text-primary/60 focus:border-accent"
                 />
-                <Button className="w-full bg-primary hover:bg-accent text-primary font-semibold">
+                <Button className="w-full bg-black hover:bg-accent text-primary font-semibold">
                   Subscribe
                 </Button>
               </div>

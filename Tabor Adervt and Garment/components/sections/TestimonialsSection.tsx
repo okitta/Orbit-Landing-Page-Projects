@@ -80,10 +80,10 @@ export default function TestimonialsSection() {
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-primary/80 max-w-3xl mx-auto">
+          <p className="text-lg text-black/80 max-w-3xl mx-auto">
             Trusted by hundreds—here's why our customers keep coming back.
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function TestimonialsSection() {
               onClick={prevTestimonial}
               className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-primary transition-all duration-300 hover:scale-105"
             >
-              <ChevronLeft className="h-6 w-6 text-primary" />
+              <ChevronLeft className="h-6 w-6 text-black" />
             </Button>
           </div>
 
@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
               onClick={nextTestimonial}
               className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-primary transition-all duration-300 hover:scale-105"
             >
-              <ChevronRight className="h-6 w-6 text-primary" />
+              <ChevronRight className="h-6 w-6 text-black" />
             </Button>
           </div>
 
@@ -124,10 +124,10 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div className="flex gap-1 mb-4">{renderStars(testimonials[currentTestimonial].rating)}</div>
-                <blockquote className="text-xl text-primary/80 italic mb-6">
+                <blockquote className="text-xl text-black/80 italic mb-6">
                   "{testimonials[currentTestimonial].text}"
                 </blockquote>
-                <cite className="text-primary font-semibold not-italic">
+                <cite className="text-black font-semibold not-italic">
                   — {testimonials[currentTestimonial].name}
                 </cite>
               </div>

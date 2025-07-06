@@ -47,7 +47,7 @@ export default function Header() {
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
                 className={`font-medium transition-colors duration-300 hover:text-black ${
-                  isScrolled ? 'text-white' : 'text-white'
+                  isScrolled ? 'text-black' : 'text-white'
                 }`}
               >
                 {item}
@@ -58,7 +58,7 @@ export default function Header() {
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className={`flex items-center space-x-2 text-sm ${
-              isScrolled ? 'text-white' : 'text-white'
+              isScrolled ? 'text-black' : 'text-white'
             }`}>
               <Phone className="w-4 h-4" />
               <span>+(251) 911389796</span>
@@ -67,7 +67,7 @@ export default function Header() {
               onClick={() => scrollToSection('contact')}
               className="bg-white hover:bg-white/90 text-black font-semibold px-6"
             >
-              Start Your Project
+              Contact Us
             </Button>
           </div>
 
@@ -104,7 +104,7 @@ export default function Header() {
                   onClick={() => scrollToSection('contact')}
                   className="w-full bg-black hover:bg-black/90 text-white font-semibold"
                 >
-                  Start Your Project
+                  Contact Us
                 </Button>
               </div>
             </nav>

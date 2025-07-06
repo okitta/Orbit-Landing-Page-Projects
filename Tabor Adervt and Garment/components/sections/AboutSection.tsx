@@ -53,10 +53,10 @@ export default function AboutSection() {
           {/* Right: Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
                 More Than Just Prints—We Build Brands.
               </h2>
-              <p className="text-lg text-primary/80 leading-relaxed mb-8">
+              <p className="text-lg text-black leading-relaxed mb-8">
                 Tabor Advert is a full-service apparel and print production company based in [insert location]. With a strong foothold in garment creation and modern printing technology, we're your one-stop partner for bringing bold ideas to life. Whether it's custom t-shirts, banners, or branded gift products—we deliver quality that wears well and speaks louder.<br/><br/>
                 We take pride in our dedicated Garment House, where creativity meets craftsmanship to produce custom shirts and jerseys tailored for businesses, events, and individuals who value uniqueness.
               </p>

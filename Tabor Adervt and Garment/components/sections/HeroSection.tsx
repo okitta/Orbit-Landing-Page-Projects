@@ -95,7 +95,7 @@ export default function HeroSection() {
           <Button 
             size="lg" 
             onClick={() => scrollToSection('services')}
-            className="bg-white hover:bg-white/90 text-primary font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-black hover:bg-white/90 text-primary font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Explore Services
           </Button>

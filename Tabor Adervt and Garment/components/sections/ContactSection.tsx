@@ -148,8 +148,8 @@ export default function ContactSection() {
     <section className="py-24 bg-primary/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Let's Build Something Bold Together.</h2>
-          <p className="text-lg text-primary/80 max-w-2xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">Let's Build Something Bold Together.</h2>
+          <p className="text-lg text-black/80 max-w-2xl mx-auto">
             Got a project or an idea? We're here to help bring it to life. Whether it's apparel, gifts, or custom printing, drop us a message and let's get started.
           </p>
         </div>
@@ -157,7 +157,7 @@ export default function ContactSection() {
           {/* Contact Form */}
           <Card className="w-full shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary">Start Your Project</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black">Start Your Project</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -216,7 +216,7 @@ export default function ContactSection() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="w-full bg-primary hover:bg-primary/90 text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -227,18 +227,18 @@ export default function ContactSection() {
           {/* Contact Info */}
           <Card className="w-full shadow-lg bg-white">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary">Contact Information</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black">Contact Information</CardTitle>
             </CardHeader>
             <CardContent className="space-y-8">
               {contactInfo.map((info, idx) => (
                 <div key={idx} className="flex items-start gap-4">
-                  <div className="bg-primary text-white rounded-full p-2 flex items-center justify-center">
+                  <div className="bg-primary text-black rounded-full p-2 flex items-center justify-center">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1">{info.title}</h4>
+                    <h4 className="font-semibold text-black mb-1">{info.title}</h4>
                     {info.details.map((detail, i) => (
-                      <p key={i} className="text-primary/80 text-sm">{detail}</p>
+                      <p key={i} className="text-black/80 text-sm">{detail}</p>
                     ))}
                   </div>
                 </div>
@@ -250,7 +250,7 @@ export default function ContactSection() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/90 transition-all duration-300"
+                    className="w-10 h-10 bg-primary text-black rounded-full flex items-center justify-center hover:bg-primary/90 transition-all duration-300"
                   >
                     {social.icon}
                   </a>

@@ -94,10 +94,10 @@ export default function ProductsSection() {
     <section className="py-24 bg-primary/10 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
             Branded Products that Make a Statement
           </h2>
-          <p className="text-lg text-primary/80 max-w-3xl mx-auto">
+          <p className="text-lg text-black/80 max-w-3xl mx-auto">
             Explore our wide selection of custom apparel and gift items designed to amplify your identity.
           </p>
         </div>
@@ -119,11 +119,11 @@ export default function ProductsSection() {
                     </div>
                     <CardContent className="p-6">
                       <div className="mb-4">
-                        <h3 className="text-xl font-semibold text-primary">
+                        <h3 className="text-xl font-semibold text-black">
                           {product.name}
                         </h3>
                       </div>
-                      <p className="text-primary/70 mb-6">{product.description}</p>
+                      <p className="text-black/80 mb-6">{product.description}</p>
                       <Button
                         className="w-full bg-primary text-primary-foreground font-semibold transition-colors duration-300 shadow-md hover:bg-primary/80"
                         onClick={() => window.open('https://t.me/teyimgarment', '_blank')}
@@ -163,7 +163,7 @@ export function ServicesSection() {
     <section className="py-24 bg-primary/10 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
             Custom Printing & Garment Services That Elevate Your Brand
           </h2>
         </div>
@@ -172,53 +172,53 @@ export function ServicesSection() {
           <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu bg-white">
             <CardContent className="p-6 flex flex-col items-center text-center">
               <span className="text-3xl mb-3 bg-brand-dillGreen rounded-full p-2">🖼️</span>
-              <h3 className="text-xl font-semibold text-primary">Banner Printing</h3>
-              <p className="text-primary/80 mb-4">Eye-catching and durable—ideal for indoor and outdoor visibility.</p>
+              <h3 className="text-xl font-semibold text-black">Banner Printing</h3>
+              <p className="text-black/80 mb-4">Eye-catching and durable—ideal for indoor and outdoor visibility.</p>
             </CardContent>
           </Card>
           {/* T-shirt Printing */}
           <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu bg-white">
             <CardContent className="p-6 flex flex-col items-center text-center">
               <span className="text-3xl mb-3 bg-brand-dillGreen rounded-full p-2">👕</span>
-              <h3 className="text-xl font-semibold text-primary">T-shirt Printing</h3>
-              <p className="text-primary/80 mb-4">High-quality custom prints with vibrant colors and lasting impressions.</p>
+              <h3 className="text-xl font-semibold text-black">T-shirt Printing</h3>
+              <p className="text-black/80 mb-4">High-quality custom prints with vibrant colors and lasting impressions.</p>
             </CardContent>
           </Card>
           {/* Stamp Printing */}
           <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu bg-white">
             <CardContent className="p-6 flex flex-col items-center text-center">
               <span className="text-3xl mb-3 bg-brand-dillGreen rounded-full p-2">🧾</span>
-              <h3 className="text-xl font-semibold text-primary">Stamp Printing</h3>
-              <p className="text-primary/80 mb-4">Professional custom stamps for businesses, schools, or personal use.</p>
+              <h3 className="text-xl font-semibold text-black">Stamp Printing</h3>
+              <p className="text-black/80 mb-4">Professional custom stamps for businesses, schools, or personal use.</p>
             </CardContent>
           </Card>
           {/* Mug Printing */}
           <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu bg-white">
             <CardContent className="p-6 flex flex-col items-center text-center">
               <span className="text-3xl mb-3 bg-brand-dillGreen rounded-full p-2">☕</span>
-              <h3 className="text-xl font-semibold text-primary">Mug Printing</h3>
-              <p className="text-primary/80 mb-4">Personalized mugs for gifting or brand merchandise.</p>
+              <h3 className="text-xl font-semibold text-black">Mug Printing</h3>
+              <p className="text-black/80 mb-4">Personalized mugs for gifting or brand merchandise.</p>
             </CardContent>
           </Card>
           {/* Paper Bag Printing */}
           <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu bg-white">
             <CardContent className="p-6 flex flex-col items-center text-center">
               <span className="text-3xl mb-3 bg-brand-dillGreen rounded-full p-2">🛍️</span>
-              <h3 className="text-xl font-semibold text-primary">Paper Bag Printing</h3>
-              <p className="text-primary/80 mb-4">Eco-friendly and brand-forward—designed to carry your message.</p>
+              <h3 className="text-xl font-semibold text-black">Paper Bag Printing</h3>
+              <p className="text-black/80 mb-4">Eco-friendly and brand-forward—designed to carry your message.</p>
             </CardContent>
           </Card>
           {/* Garment Production */}
           <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu bg-white">
             <CardContent className="p-6 flex flex-col items-center text-center">
               <span className="text-3xl mb-3 bg-brand-dillGreen text-white rounded-full p-2">🧵</span>
-              <h3 className="text-xl font-semibold text-primary">Garment Production</h3>
-              <p className="text-primary/80 mb-4">In-house garment crafting. From fabric selection to final stitch, we produce quality shirts, jerseys, and custom pieces tailored to your needs. Fashion labels, corporate uniforms, or promotional wear—we bring precision and passion to every thread.</p>
+              <h3 className="text-xl font-semibold text-black">Garment Production</h3>
+              <p className="text-black/80 mb-4">In-house garment crafting. From fabric selection to final stitch, we produce quality shirts, jerseys, and custom pieces tailored to your needs. Fashion labels, corporate uniforms, or promotional wear—we bring precision and passion to every thread.</p>
             </CardContent>
           </Card>
         </div>
         <div className="text-center">
-          <Button className="bg-primary hover:bg-brand-dillGreen text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <Button className="bg-primary hover:bg-brand-dillGreen text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
             Let's Print Together
           </Button>
         </div>
