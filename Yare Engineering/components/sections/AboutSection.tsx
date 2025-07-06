@@ -30,7 +30,7 @@ export default function AboutSection() {
       {/* Dot Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #4682B4 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #1300db 1px, transparent 1px)',
           backgroundSize: '24px 24px'
         }}></div>
       </div>
@@ -41,11 +41,11 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative max-w-lg mx-auto lg:mx-0">
               <img 
-                src="/image/background.png" 
+                src="/image/product_9.jpg" 
                 alt="Yared Engineering team or machinery in action" 
                 className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gold rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-steelBlue rounded-full opacity-10 animate-pulse delay-1000"></div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function AboutSection() {
           50% { background-position: 100% 50%; }
         }
         .animate-text-gradient {
-          background: linear-gradient(90deg, #4682B4 0%, #B0B3B8 50%, #4682B4 100%);
+          background: linear-gradient(90deg, #1300db 0%, #B0B3B8 50%, #1300db 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;

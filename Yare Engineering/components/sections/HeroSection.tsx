@@ -75,7 +75,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/image/background.png"
+          src="/image/product_11.jpg"
           alt="Background"
           className="w-full h-full object-cover opacity-50"
         />
@@ -92,7 +92,7 @@ export default function HeroSection() {
           <Button 
             size="lg" 
             onClick={() => scrollToSection('contact')}
-            className="bg-gold hover:bg-gold-dark text-charcoal font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white hover:bg-gray-100 text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Get in Touch
             <ArrowRight className="ml-2 w-5 h-5" />

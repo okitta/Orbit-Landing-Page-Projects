@@ -34,7 +34,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-charcoal' : 'text-gold'
+              isScrolled ? 'text-charcoal' : 'text-white'
             }`}>
               Yared Engineering
             </h1>
@@ -46,8 +46,8 @@ export default function Header() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className={`font-medium transition-colors duration-300 hover:text-gold ${
-                  isScrolled ? 'text-charcoal' : 'text-gold'
+                className={`font-medium transition-colors duration-300 hover:text-white ${
+                  isScrolled ? 'text-charcoal' : 'text-white'
                 }`}
               >
                 {item}
@@ -65,7 +65,7 @@ export default function Header() {
             </div>
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-gold hover:bg-gold-dark text-charcoal font-semibold px-6"
+              className="bg-white hover:bg-gray-100 text-black font-semibold px-6"
             >
               Contact Us
             </Button>
@@ -91,7 +91,7 @@ export default function Header() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left font-medium text-charcoal hover:text-gold transition-colors"
+                  className="block w-full text-left font-medium text-charcoal hover:text-white transition-colors"
                 >
                   {item}
                 </button>
@@ -103,7 +103,7 @@ export default function Header() {
                 </div>
                 <Button 
                   onClick={() => scrollToSection('contact')}
-                  className="w-full bg-gold hover:bg-gold-dark text-charcoal font-semibold"
+                  className="w-full bg-white hover:bg-gray-100 text-black font-semibold"
                 >
                   Contact Us
                 </Button>

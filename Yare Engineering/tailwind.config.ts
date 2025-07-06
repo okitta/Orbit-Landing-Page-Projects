@@ -61,9 +61,9 @@ const config: Config = {
           '5': 'hsl(var(--chart-5))',
         },
         steelBlue: {
-          DEFAULT: '#4682B4',
-          light: '#5A7CA8',
-          dark: '#3B4C5A',
+          DEFAULT: '#1300db',
+          light: '#4a3de8',
+          dark: '#0d0099',
         },
         industrialGray: {
           DEFAULT: '#B0B3B8',
@@ -71,8 +71,8 @@ const config: Config = {
           light: '#E6E6E6',
         },
         gold: {
-          DEFAULT: '#FFD700',
-          dark: '#F2A900',
+          DEFAULT: '#ffffff',
+          dark: '#f8f9fa',
         },
         charcoal: {
           DEFAULT: '#22223B',

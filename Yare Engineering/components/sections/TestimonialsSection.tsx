@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
     return Array.from({ length: 5 }, (_, index) => (
       <Star
         key={index}
-        className={`w-5 h-5 ${index < rating ? 'fill-gold text-gold' : 'text-industrialGray'}`}
+        className={`w-5 h-5 ${index < rating ? 'fill-white text-white' : 'text-industrialGray'}`}
       />
     ));
   };
@@ -116,7 +116,7 @@ export default function TestimonialsSection() {
           <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-steelBlue/10 shadow-xl max-w-3xl mx-auto transform-gpu transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
             <CardContent className="p-8">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-gold/20">
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-white/20">
                   <img
                     src={testimonials[currentTestimonial].image}
                     alt={testimonials[currentTestimonial].name}

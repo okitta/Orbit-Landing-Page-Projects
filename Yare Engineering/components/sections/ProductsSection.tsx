@@ -17,9 +17,9 @@ export default function ProductsSection() {
 
   const products: Product[] = [
     {
-      name: 'Precast Bridge Metals / Prefabricated Steel Components',
+      name: 'Precast Bridge Metals',
       price: '',
-      description: 'Built for strength, designed for ease. Our prefabricated bridge components are precision-engineered for quick installation, cost-effectiveness, and exceptional durability.',
+      description: 'Our prefabricated bridge components are precision-engineered for quick installation, cost-effectiveness, and exceptional durability.',
       image: '/image/product_1.jpg'
     },
     {
@@ -29,22 +29,28 @@ export default function ProductsSection() {
       image: '/image/product_2.jpg'
     },
     {
-      name: 'Bread Mixer / Dough Mixer',
+      name: 'Bread Dough Mixer',
       price: '',
-      description: 'Mix with consistency. Heavy-duty dough mixers for bakeries and factories—ensuring even, fast, and high-volume production.',
+      description: 'Mix with consistency. Dough mixers for bakeries and factories—ensuring even, fast, and high-volume production.',
       image: '/image/product_3.jpg'
     },
     {
-      name: 'Electric Vehicles (EVs)',
+      name: 'Hybrid Vechiles',
       price: '',
       description: 'Drive into the future. Affordable, efficient, and eco-conscious electric mobility options designed for cities and industries.',
       image: '/image/product_4.jpg'
     },
     {
+      name: 'Gold Wash Plant',
+      price: '',
+      description: 'Efficient and reliable gold washing plant designed for maximum recovery with minimal water and energy use.',
+      image: '/image/product_5.jpg'
+    },
+    {
       name: 'Bread Kneading Machine',
       price: '',
       description: 'Automated precision, bakery perfection. Optimized kneading machines for uniform dough texture and minimized manual labor.',
-      image: '/image/product_5.jpg'
+      image: '/image/product_15.jpg'
     }
   ];
 
@@ -79,7 +85,7 @@ export default function ProductsSection() {
               style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
             >
               {products.map((product, index) => (
-                <div key={index} className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 sm:px-3 lg:px-4">
+                <div key={index} className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 sm:px-3 lg:px-4 my-8">
                   <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu">
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-steelBlue/20 to-transparent z-10" />
@@ -92,7 +98,7 @@ export default function ProductsSection() {
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-semibold text-steelBlue">{product.name}</h3>
-                        <span className="text-lg font-bold text-gold">{product.price}</span>
+                        <span className="text-lg font-bold text-white">{product.price}</span>
                       </div>
                       <p className="text-gray-600 mb-6">{product.description}</p>
                       <Button 

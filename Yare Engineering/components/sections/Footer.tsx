@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, ArrowUp, Send } from 'lucide-react';
 
 export default function Footer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -91,7 +91,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-gold mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   Yared Engineering
                 </h3>
                 <p className="text-white/80 leading-relaxed">
@@ -102,17 +102,24 @@ export default function Footer() {
               {/* Social Media */}
               <div className="flex gap-4">
                 {[
-                  { icon: Facebook, href: '#' },
-                  { icon: Twitter, href: '#' },
-                  { icon: Instagram, href: '#' },
-                  { icon: Linkedin, href: '#' }
+                  { icon: 'tiktok', href: 'https://www.tiktok.com/@yaredengineering?is_from_webapp=1&sender_device=pc' },
+                  { icon: Facebook, href: 'https://web.facebook.com/profile.php?id=61576543723410' },
+                  { icon: Send, href: 'https://t.me/yaredmachinary' }
                 ].map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-steelBlue transition-all duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-steelBlue transition-all duration-300"
                   >
-                    <social.icon className="w-5 h-5" />
+                    {social.icon === 'tiktok' ? (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                      </svg>
+                    ) : (
+                      <social.icon className="w-5 h-5" />
+                    )}
                   </a>
                 ))}
               </div>
@@ -120,11 +127,11 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-gold">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
                 {['About', 'Products', 'Testimonials', 'Contact', 'Careers'].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-white/80 hover:text-gold transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                       {link}
                     </a>
                   </li>
@@ -134,11 +141,11 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-gold">Product Categories</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Product Categories</h4>
               <ul className="space-y-3">
                 {['Bridges', 'Charcoal Machines', 'Mixers', 'EVs', 'Kneading Machines'].map((service) => (
                   <li key={service}>
-                    <a href="#" className="text-white/80 hover:text-gold transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -148,7 +155,7 @@ export default function Footer() {
 
             {/* Newsletter */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-gold">Stay Updated</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Stay Updated</h4>
               <p className="text-white/80 mb-4">
                 Subscribe to our newsletter for the latest updates and insights.
               </p>
@@ -156,9 +163,9 @@ export default function Footer() {
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-gold"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white"
                 />
-                <Button className="w-full bg-gold hover:bg-gold-dark text-steelBlue font-semibold">
+                <Button className="w-full bg-white hover:bg-gray-100 text-steelBlue font-semibold">
                   Subscribe
                 </Button>
               </div>
@@ -174,13 +181,13 @@ export default function Footer() {
             </p>
             
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
                 Cookie Policy
               </a>
             </div>
@@ -191,7 +198,7 @@ export default function Footer() {
       {/* Scroll to Top Button */}
       <Button
         onClick={scrollToTop}
-        className="fixed bottom-6 left-6 w-12 h-12 bg-gold hover:bg-gold-dark text-steelBlue rounded-full shadow-lg z-50"
+        className="fixed bottom-6 left-6 w-12 h-12 bg-white hover:bg-gray-100 text-steelBlue rounded-full shadow-lg z-50"
         size="icon"
       >
         <ArrowUp className="w-5 h-5" />
