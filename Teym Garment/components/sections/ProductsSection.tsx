@@ -94,10 +94,10 @@ export default function ProductsSection() {
     <section className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#6A1B9A] mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#402222] mb-6">
             Our Products
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-[#0D0D0D] max-w-3xl mx-auto">
             Discover our collection of handcrafted fashion pieces, designed with love in Ethiopia
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function ProductsSection() {
                 <div key={index} className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 sm:px-3 lg:px-4">
                   <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#6A1B9A]/20 to-transparent z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#402222]/20 to-transparent z-10" />
                       <img
                         src={product.image}
                         alt={product.name}
@@ -121,12 +121,12 @@ export default function ProductsSection() {
                     </div>
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-xl font-semibold text-[#6A1B9A]">{product.name}</h3>
-                        <span className="text-lg font-bold text-[#FFD700]">{product.price}</span>
+                        <h3 className="text-xl font-semibold text-[#402222]">{product.name}</h3>
+                        <span className="text-lg font-bold text-[#402222]">{product.price}</span>
                       </div>
-                      <p className="text-gray-600 mb-6">{product.description}</p>
+                      <p className="text-[#0D0D0D] mb-6">{product.description}</p>
                       <Button 
-                        className="w-full bg-[#6A1B9A] hover:bg-[#8E24AA] text-white transition-colors duration-300"
+                        className="w-full bg-[#402222] hover:bg-[#0D0D0D] text-white transition-colors duration-300"
                         onClick={() => window.open('https://t.me/teyimgarment', '_blank')}
                       >
                       Buy Now
@@ -140,14 +140,14 @@ export default function ProductsSection() {
 
           <Button
             onClick={handlePrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white text-[#6A1B9A] hover:bg-[#6A1B9A] hover:text-white rounded-full p-2 shadow-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white text-[#402222] hover:bg-[#402222] hover:text-white rounded-full p-2 shadow-lg"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
 
           <Button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white text-[#6A1B9A] hover:bg-[#6A1B9A] hover:text-white rounded-full p-2 shadow-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white text-[#402222] hover:bg-[#402222] hover:text-white rounded-full p-2 shadow-lg"
           >
             <ChevronRight className="h-6 w-6" />
           </Button>

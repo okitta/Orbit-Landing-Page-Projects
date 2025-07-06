@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, Facebook, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
@@ -132,17 +132,21 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { name: "Instagram", url: "https://instagram.com/teyimgarment", icon: <Instagram className="w-5 h-5" /> },
-    { name: "Facebook", url: "https://facebook.com/teyimgarment", icon: <Facebook className="w-5 h-5" /> },
+    { name: "Tiktok", url: "https://tiktok.com/teyimgarment", icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+      </svg>
+    )},
+    { name: "Facebook", url: "https://facebook.com/teyimgarment", icon: <Facebook className="w-5 h-5" />},
     { name: "Telegram", url: "https://t.me/teyimgarment", icon: <Send className="w-5 h-5" /> }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-[#6A1B9A]/5 to-transparent relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-[#402222]/5 to-transparent relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#6A1B9A] mb-6">Let's Stay Connected</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#402222] mb-6">Let's Stay Connected</h2>
+          <p className="text-lg text-[#0D0D0D] max-w-2xl mx-auto">
             Got a question, custom order, or want to learn more about our collection? We'd love to hear from you.
           </p>
         </div>
@@ -151,7 +155,7 @@ export default function ContactSection() {
           {/* Contact Form */}
           <Card className="w-full shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-[#6A1B9A]">Send Us a Message</CardTitle>
+              <CardTitle className="text-2xl font-bold text-[#402222]">Send Us a Message</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -164,7 +168,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'name' ? 'border-[#6A1B9A]' : 'border-gray-200'}`}
+                    className={`border-2 ${focusedField === 'name' ? 'border-[#402222]' : 'border-gray-200'}`}
                   />
                   {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                 </div>
@@ -179,7 +183,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'email' ? 'border-[#6A1B9A]' : 'border-gray-200'}`}
+                    className={`border-2 ${focusedField === 'email' ? 'border-[#402222]' : 'border-gray-200'}`}
                   />
                   {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                 </div>
@@ -193,7 +197,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('phone')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'phone' ? 'border-[#6A1B9A]' : 'border-gray-200'}`}
+                    className={`border-2 ${focusedField === 'phone' ? 'border-[#402222]' : 'border-gray-200'}`}
                   />
                   {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
                 </div>
@@ -207,7 +211,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField(null)}
-                    className={`min-h-[120px] border-2 ${focusedField === 'message' ? 'border-[#6A1B9A]' : 'border-gray-200'}`}
+                    className={`min-h-[120px] border-2 ${focusedField === 'message' ? 'border-[#402222]' : 'border-gray-200'}`}
                   />
                   {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                 </div>
@@ -215,7 +219,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#6A1B9A] hover:bg-[#8E24AA] text-white transition-colors duration-300"
+                  className="w-full bg-[#402222] hover:bg-[#0D0D0D] text-white transition-colors duration-300"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <MessageCircle className="ml-2 w-4 h-4" />
@@ -232,11 +236,11 @@ export default function ContactSection() {
                 <Card key={index} className="transform-gpu transition-all duration-300 hover:shadow-lg hover:scale-105">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-[#6A1B9A]">{info.icon}</div>
+                      <div className="text-[#402222]">{info.icon}</div>
                       <div>
-                        <h3 className="font-semibold text-[#6A1B9A] mb-2">{info.title}</h3>
+                        <h3 className="font-semibold text-[#402222] mb-2">{info.title}</h3>
                         {info.details.map((detail, i) => (
-                          <p key={i} className="text-gray-600">{detail}</p>
+                          <p key={i} className="text-[#0D0D0D]">{detail}</p>
                         ))}
                       </div>
                     </div>
@@ -248,15 +252,15 @@ export default function ContactSection() {
             {/* Social Media Links */}
             <Card className="transform-gpu transition-all duration-300 hover:shadow-lg">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-[#6A1B9A] mb-4">Follow us on</h3>
-                <div className="flex gap-4">
+                <h3 className="font-semibold text-[#402222] mb-4">Follow us on</h3>
+                <div className="flex flex-row gap-2">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-[#6A1B9A]/10 text-[#6A1B9A] hover:bg-[#6A1B9A] hover:text-white transition-all duration-300 transform hover:scale-110"
+                      className="flex items-center gap-2 w-fit p-3 rounded-full bg-[#402222]/10 text-[#402222] hover:bg-[#402222] hover:text-white transition-all duration-300 transform hover:scale-110"
                     >
                       {social.icon}
                     </a>

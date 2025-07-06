@@ -56,12 +56,12 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-[#6A1B9A] overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-[#0D0D0D] overflow-hidden">
       {/* Bubbles */}
       {bubbles.map(bubble => (
         <div
           key={bubble.id}
-          className="absolute rounded-full bg-white/30 pointer-events-none transition-transform duration-300"
+          className="absolute rounded-full bg-white/20 pointer-events-none transition-transform duration-300"
           style={{
             left: `${bubble.x}%`,
             top: `${bubble.y}%`,
@@ -75,9 +75,9 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/image/background.png"
+          src="/image/background.jpg"
           alt="Background"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
 
@@ -85,7 +85,7 @@ export default function HeroSection() {
         <div className="max-w-2xl ml-0">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight text-white">
             Wear Confidence.
-            <span className="block text-[#FFD700] mt-2">
+            <span className="block text-white mt-2">
               Crafted by Teyim
             </span>
           </h1>
@@ -97,7 +97,7 @@ export default function HeroSection() {
           <Button 
             size="lg" 
             onClick={() => window.open('https://t.me/teyimgarment', '_blank')}
-            className="bg-[#FFD700] hover:bg-[#FFA000] text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-[#402222] hover:bg-[#0D0D0D] text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Shop Now
             <ArrowRight className="ml-2 w-5 h-5" />

@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Facebook, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -56,7 +56,7 @@ export default function Footer() {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 215, 0, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(64, 34, 34, ${particle.opacity})`;
         ctx.fill();
       });
 
@@ -77,7 +77,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#6A1B9A] text-white overflow-hidden">
+    <footer className="relative bg-[#402222] text-white overflow-hidden">
       {/* Particle Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -91,40 +91,37 @@ export default function Footer() {
             {/* Company Info */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-[#FFD700] mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   Teyim Garment
                 </h3>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/90 leading-relaxed">
                   Premium Ethiopian fashion for every body type. We create stylish, comfortable clothing that helps you express your unique personality.
                 </p>
               </div>
               
               {/* Social Media */}
-              <div className="flex gap-4">
-                {[
-                  { icon: Facebook, href: '#' },
-                  { icon: Twitter, href: '#' },
-                  { icon: Instagram, href: '#' },
-                  { icon: Linkedin, href: '#' }
-                ].map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFD700] hover:text-[#6A1B9A] transition-all duration-300"
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
+              <div className="flex flex-row gap-2">
+                <a href="https://tiktok.com/teyimgarment" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-fit bg-white/10 rounded-full px-3 py-2 hover:bg-white hover:text-[#402222] transition-all duration-300">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                  </svg>
+                </a>
+                <a href="https://facebook.com/teyimgarment" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-fit bg-white/10 rounded-full px-3 py-2 hover:bg-white hover:text-[#402222] transition-all duration-300">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://t.me/teyimgarment" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-fit bg-white/10 rounded-full px-3 py-2 hover:bg-white hover:text-[#402222] transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5"><path d="M9.04 13.37l-.39 4.13c.56 0 .8-.24 1.09-.53l2.62-2.5 5.44 3.97c1 .55 1.72.26 1.97-.92l3.58-16.7c.32-1.48-.54-2.06-1.5-1.7L1.6 9.17c-1.45.56-1.43 1.36-.25 1.72l4.6 1.44 10.7-6.74c.5-.32.96-.14.58.18z"/></svg>
+                </a>
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-[#FFD700]">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
                 {['About Us', 'Services', 'Portfolio', 'Contact', 'Blog', 'Careers'].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-white/80 hover:text-[#FFD700] transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                       {link}
                     </a>
                   </li>
@@ -134,11 +131,11 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-[#FFD700]">Product Categories</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">Product Categories</h4>
               <ul className="space-y-3">
                 {['Crop Tops', 'T-Shirts', 'Two-Piece Sets', 'Trousers', 'Men\'s Wear', 'Gift Items'].map((service) => (
                   <li key={service}>
-                    <a href="#" className="text-white/80 hover:text-[#FFD700] transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -148,17 +145,17 @@ export default function Footer() {
 
             {/* Newsletter */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-[#FFD700]">Stay Updated</h4>
-              <p className="text-white/80 mb-4">
+              <h4 className="text-lg font-semibold mb-6 text-white">Stay Updated</h4>
+              <p className="text-white/90 mb-4">
                 Subscribe to our newsletter for the latest updates and insights.
               </p>
               <div className="space-y-3">
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-[#FFD700]"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white"
                 />
-                <Button className="w-full bg-[#FFD700] hover:bg-[#FFA000] text-[#6A1B9A] font-semibold">
+                <Button className="w-full bg-white hover:bg-[#0D0D0D] text-[#402222] font-semibold">
                   Subscribe
                 </Button>
               </div>
@@ -167,20 +164,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20">
+        <div className="border-t border-white/30">
           <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/60 text-sm">
+            <p className="text-white/70 text-sm">
               © {currentYear} Teyim Garment. All rights reserved.
             </p>
             
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-[#FFD700] transition-colors">
+              <a href="#" className="text-white/70 hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-white/60 hover:text-[#FFD700] transition-colors">
+              <a href="#" className="text-white/70 hover:text-white transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-white/60 hover:text-[#FFD700] transition-colors">
+              <a href="#" className="text-white/70 hover:text-white transition-colors">
                 Cookie Policy
               </a>
             </div>
@@ -191,7 +188,7 @@ export default function Footer() {
       {/* Scroll to Top Button */}
       <Button
         onClick={scrollToTop}
-        className="fixed bottom-6 left-6 w-12 h-12 bg-[#FFD700] hover:bg-[#FFA000] text-[#6A1B9A] rounded-full shadow-lg z-50"
+        className="fixed bottom-6 left-6 w-12 h-12 bg-white hover:bg-[#0D0D0D] text-[#402222] rounded-full shadow-lg z-50"
         size="icon"
       >
         <ArrowUp className="w-5 h-5" />

@@ -30,7 +30,7 @@ export default function AboutSection() {
       {/* Dot Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #6A1B9A 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #402222 1px, transparent 1px)',
           backgroundSize: '24px 24px'
         }}></div>
       </div>
@@ -41,22 +41,22 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative max-w-lg mx-auto lg:mx-0">
               <img 
-                src="/image/background.png" 
+                src="/image/about.jpg" 
                 alt="Teyim Garment Workshop" 
                 className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#FFD700] rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6A1B9A] rounded-full opacity-10 animate-pulse delay-1000"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#402222] rounded-full opacity-10 animate-pulse delay-1000"></div>
             </div>
           </div>
 
           {/* Right: Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#6A1B9A] mb-6 leading-tight animate-text-gradient">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#402222] mb-6 leading-tight animate-text-gradient">
                 Who We Are
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-lg text-[#0D0D0D] leading-relaxed mb-8">
                 Teyim Garment is more than a clothing brand — it's a statement of individuality, inclusivity, and creativity. Founded with the belief that everyone deserves stylish and comfortable wear, we specialize in garments that combine tradition with modern trends. From hand-selected fabrics to precision tailoring, every piece we create is designed to make you feel bold, beautiful, and authentically you.
               </p>
             </div>
@@ -66,18 +66,18 @@ export default function AboutSection() {
               {values.map((value, index) => (
                 <Card 
                   key={index}
-                  className={`transition-all duration-300 cursor-pointer border-l-4 border-l-[#FFD700] hover:shadow-lg ${hoveredCard === index ? 'bg-[#F5F5F5] scale-105' : ''}`}
+                  className={`transition-all duration-300 cursor-pointer border-l-4 border-l-[#402222] hover:shadow-lg ${hoveredCard === index ? 'bg-[#F5F5F5] scale-105' : ''}`}
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
-                      <div className="text-[#6A1B9A] flex-shrink-0">
+                      <div className="text-[#402222] flex-shrink-0">
                         {value.icon}
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#6A1B9A] mb-1">{value.title}</h3>
-                        <p className={`text-gray-600 transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-70'}`}>
+                        <h3 className="font-semibold text-[#402222] mb-1">{value.title}</h3>
+                        <p className={`text-[#0D0D0D] transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-70'}`}>
                           {value.description}
                         </p>
                       </div>
@@ -96,7 +96,7 @@ export default function AboutSection() {
           50% { background-position: 100% 50%; }
         }
         .animate-text-gradient {
-          background: linear-gradient(90deg, #6A1B9A 0%, #8E24AA 50%, #6A1B9A 100%);
+          background: linear-gradient(90deg, #402222 0%, #0D0D0D 50%, #402222 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;

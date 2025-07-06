@@ -33,11 +33,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-[#1A237E]' : 'text-white'
-            }`}>
-              Teyim Garment
-            </h1>
+            <img
+              src="/image/logo.png"
+              alt="Teyim Garment Logo"
+              className="h-10 w-auto object-contain drop-shadow-md"
+              style={{ filter: isScrolled ? 'none' : 'brightness(0) invert(1)' }}
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -65,7 +66,7 @@ export default function Header() {
             </div>
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-[#FFD700] hover:bg-[#FFA000] text-[#1A237E] font-semibold px-6"
+              className="bg-[#402222] hover:bg-[#0D0D0D] text-white font-semibold px-6"
             >
               Contact Us
             </Button>
@@ -102,7 +103,7 @@ export default function Header() {
                 </div>
                 <Button 
                   onClick={() => scrollToSection('contact')}
-                  className="w-full bg-[#FFD700] hover:bg-[#FFA000] text-[#1A237E] font-semibold"
+                  className="w-full bg-[#402222] hover:bg-[#0D0D0D] text-white font-semibold"
                 >
                   Contact Us
                 </Button>
