@@ -56,7 +56,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-primary overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-foreground overflow-hidden">
       {/* Bubbles */}
       {bubbles.map(bubble => (
         <div
@@ -75,7 +75,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/image/background.png"
+          src="/image/background.jpg"
           alt="Background"
           className="w-full h-full object-cover opacity-50"
         />
@@ -85,7 +85,7 @@ export default function HeroSection() {
         <div className="max-w-2xl ml-0">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight text-white">
             Engineering Excellence.
-            <span className="block text-3xl text-white mt-2">
+            <span className="block text-crimson mt-2">
               Powered by Elshalom
             </span>
           </h1>
@@ -97,7 +97,7 @@ export default function HeroSection() {
           <Button 
             size="lg" 
             onClick={() => scrollToSection('contact')}
-            className="bg-primary hover:bg-primary/80 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-crimson hover:bg-crimson/80 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Contact Us
             <ArrowRight className="ml-2 w-5 h-5" />

@@ -79,7 +79,7 @@ export default function ProductsSection() {
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             Our Engineering Solutions
           </h2>
-          <p className="text-lg text-secondary max-w-3xl mx-auto">
+          <p className="text-lg text-foreground max-w-3xl mx-auto">
             Comprehensive engineering services and equipment for industrial and commercial applications.
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function ProductsSection() {
                         <h3 className="text-xl font-semibold text-primary">{product.name}</h3>
                         <span className="text-lg font-bold text-secondary">{product.price}</span>
                       </div>
-                      <p className="text-secondary mb-6">{product.description}</p>
+                      <p className="text-foreground mb-6">{product.description}</p>
                       <Button 
                         className="w-full bg-primary hover:bg-primary/80 text-white font-semibold transition-colors duration-300"
                         onClick={() => window.open('https://t.me/elshalomengineering', '_blank')}

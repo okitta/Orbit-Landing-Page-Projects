@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             What Our Customers Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-foreground max-w-3xl mx-auto">
             Real experiences from our valued customers who trust in Elshalom Engineering quality
           </p>
         </div>
@@ -116,7 +116,7 @@ export default function TestimonialsSection() {
           <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-primary/10 shadow-xl max-w-3xl mx-auto transform-gpu transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
             <CardContent className="p-8">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-primary/20">
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-secondary/20">
                   <img
                     src={testimonials[currentTestimonial].image}
                     alt={testimonials[currentTestimonial].name}

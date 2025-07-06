@@ -6,9 +6,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Send, Film } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
+
+// Custom TikTok Icon Component
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="currentColor"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -131,7 +142,7 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { name: "TikTok", url: "https://www.tiktok.com/@elshalomengineering", icon: <Film className="w-5 h-5" /> },
+    { name: "TikTok", url: "https://www.tiktok.com/@elshalomengineering", icon: <TikTokIcon className="w-5 h-5" /> },
     { name: "Facebook", url: "https://web.facebook.com/profile.php?id=100063891852112", icon: <Facebook className="w-5 h-5" /> },
     { name: "Telegram", url: "https://t.me/GashawEdeo0911763219or0921765465", icon: <Send className="w-5 h-5" /> }
   ];
@@ -141,7 +152,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Let's Stay Connected</h2>
-          <p className="text-lg text-secondary max-w-2xl mx-auto">
+          <p className="text-lg text-foreground max-w-2xl mx-auto">
             Got a question, custom order, or want to learn more about our collection? We'd love to hear from you.
           </p>
         </div>
@@ -234,7 +245,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-primary mb-1">{info.title}</h4>
-                    <ul className="text-secondary text-base">
+                    <ul className="text-foreground text-base">
                       {info.details.map((detail, i) => (
                         <li key={i}>{detail}</li>
                       ))}

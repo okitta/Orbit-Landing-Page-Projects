@@ -3,7 +3,18 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp, Film, Send } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, ArrowUp, Send } from 'lucide-react';
+
+// Custom TikTok Icon Component
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="currentColor"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 export default function Footer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -77,7 +88,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-primary text-white overflow-hidden">
+    <footer className="relative bg-foreground text-white overflow-hidden">
       {/* Particle Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -102,7 +113,7 @@ export default function Footer() {
               {/* Social Media */}
               <div className="flex gap-4">
                 {[
-                    { name: "TikTok", href: "https://www.tiktok.com/@elshalomengineering", icon: Film },
+                    { name: "TikTok", href: "https://www.tiktok.com/@elshalomengineering", icon: TikTokIcon },
                     { name: "Facebook", href: "https://web.facebook.com/profile.php?id=100063891852112", icon: Facebook },
                     { name: "Telegram", href: "https://t.me/GashawEdeo0911763219or0921765465", icon: Send }
                 ].map((social, index) => {
@@ -111,7 +122,7 @@ export default function Footer() {
                     <a
                       key={index}
                       href={social.href}
-                      className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300"
+                      className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary hover:text-foreground transition-all duration-300"
                     >
                       <Icon className="w-5 h-5" />
                     </a>
@@ -126,7 +137,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {['About Us', 'Services', 'Portfolio', 'Contact', 'Blog', 'Careers'].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-white/80 hover:text-primary transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-secondary transition-colors duration-300">
                       {link}
                     </a>
                   </li>
@@ -140,7 +151,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {['Coffee Grinder Machine', 'Bread Kneading Machine', 'Bread Dough Rising Machine', 'Brewing Machine','Butter Maker Machine','Hand Tractor','Manure Composting Machine'].map((service) => (
                   <li key={service}>
-                    <a href="#" className="text-white/80 hover:text-primary transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-secondary transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -160,7 +171,7 @@ export default function Footer() {
                   placeholder="Enter your email"
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-accent"
                 />
-                <Button className="w-full bg-white hover:bg-primary/10 text-primary font-semibold">
+                <Button className="w-full bg-secondary hover:bg-secondary/80 text-foreground font-semibold">
                   Subscribe
                 </Button>
               </div>
@@ -176,13 +187,13 @@ export default function Footer() {
             </p>
             
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-primary transition-colors">
+              <a href="#" className="text-white/60 hover:text-secondary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-white/60 hover:text-primary transition-colors">
+              <a href="#" className="text-white/60 hover:text-secondary transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-white/60 hover:text-primary transition-colors">
+              <a href="#" className="text-white/60 hover:text-secondary transition-colors">
                 Cookie Policy
               </a>
             </div>
@@ -193,7 +204,7 @@ export default function Footer() {
       {/* Scroll to Top Button */}
       <Button
         onClick={scrollToTop}
-        className="fixed bottom-6 left-6 w-12 h-12 bg-white hover:bg-primary/10 text-primary rounded-full shadow-lg z-50"
+        className="fixed bottom-6 left-6 w-12 h-12 bg-secondary hover:bg-secondary/80 text-foreground rounded-full shadow-lg z-50"
         size="icon"
       >
         <ArrowUp className="w-5 h-5" />

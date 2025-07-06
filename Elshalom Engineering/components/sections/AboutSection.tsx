@@ -41,11 +41,11 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative max-w-lg mx-auto lg:mx-0">
               <img 
-                src="/image/background.png" 
+                src="/image/product_40.jpg" 
                 alt="Elshalom Engineering Workshop" 
                 className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-full opacity-10 animate-pulse delay-1000"></div>
             </div>
           </div>
@@ -53,10 +53,10 @@ export default function AboutSection() {
           {/* Right: Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight animate-text-gradient">
+              <h2 className="text-4xl lg:text-5xl font-bold text-crimson mb-6 leading-tight animate-text-gradient">
                 Who We Are
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-lg text-foreground leading-relaxed mb-8">
                 Elshalom Electro Mechanical is a leading provider of locally manufactured and customized industrial machinery for the food, agriculture, and processing sectors. With a strong foundation in innovation, we specialize in developing durable, efficient, and affordable equipment tailored to local needs. Our mission is to empower farmers, food producers, and small industries with the tools they need to grow and succeed — sustainably and reliably. We don't just build machines — we build progress.
               </p>
             </div>
@@ -66,18 +66,18 @@ export default function AboutSection() {
               {values.map((value, index) => (
                 <Card 
                   key={index}
-                  className={`transition-all duration-300 cursor-pointer border-l-4 border-l-[#FFD700] hover:shadow-lg ${hoveredCard === index ? 'bg-[#F5F5F5] scale-105' : ''}`}
+                  className={`transition-all duration-300 cursor-pointer border-l-4 border-l-secondary hover:shadow-lg ${hoveredCard === index ? 'bg-muted scale-105' : ''}`}
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
-                      <div className="text-[#6A1B9A] flex-shrink-0">
+                      <div className="text-primary flex-shrink-0">
                         {value.icon}
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#6A1B9A] mb-1">{value.title}</h3>
-                        <p className={`text-gray-600 transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-70'}`}>
+                        <h3 className="font-semibold text-primary mb-1">{value.title}</h3>
+                        <p className={`text-foreground transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-70'}`}>
                           {value.description}
                         </p>
                       </div>
@@ -96,7 +96,7 @@ export default function AboutSection() {
           50% { background-position: 100% 50%; }
         }
         .animate-text-gradient {
-          background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--primary)) 100%);
+          background: linear-gradient(90deg, hsl(var(--crimson)) 0%, hsl(var(--secondary)) 50%, hsl(var(--crimson)) 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;

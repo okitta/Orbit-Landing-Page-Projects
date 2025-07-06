@@ -33,11 +33,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-secondary' : 'text-white'
-            }`}>
-              Elshalom Engineering
-            </h1>
+            <img 
+              src="/image/logo.png" 
+              alt="Elshalom Engineering" 
+              className={`h-16 w-auto transition-all duration-300 ${
+                isScrolled ? '' : 'brightness-0 invert'
+              }`}
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -47,7 +49,7 @@ export default function Header() {
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
                 className={`font-medium transition-colors duration-300 hover:text-primary ${
-                  isScrolled ? 'text-secondary' : 'text-white'
+                  isScrolled ? 'text-foreground' : 'text-white'
                 }`}
               >
                 {item}
@@ -65,7 +67,7 @@ export default function Header() {
             </div>
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-primary hover:bg-primary/80 text-white font-semibold px-6"
+              className="bg-crimson hover:bg-crimson/80 text-white font-semibold px-6"
             >
               Contact Us
             </Button>
@@ -90,7 +92,7 @@ export default function Header() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left font-medium text-secondary hover:text-primary transition-colors"
+                  className="block w-full text-left font-medium text-foreground hover:text-primary transition-colors"
                 >
                   {item}
                 </button>
@@ -102,7 +104,7 @@ export default function Header() {
                 </div>
                 <Button 
                   onClick={() => scrollToSection('contact')}
-                  className="w-full bg-primary hover:bg-primary/80 text-white font-semibold"
+                  className="w-full bg-crimson hover:bg-crimson/80 text-white font-semibold"
                 >
                   Contact Us
                 </Button>
