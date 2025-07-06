@@ -33,10 +33,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className={`text-2xl font-bold transition-colors duration-300 ${isScrolled ? 'text-leather-brown' : 'text-leather-primary'}`}>
-              <span className="block lg:hidden">AL</span>
-              <span className="hidden lg:block">Abrish Leather</span>
-            </h1>
+            <img 
+              src="/image/logo.png" 
+              alt="Abrish Leather Logo" 
+              className="h-10 sm:h-12 lg:h-16 w-auto transition-all duration-300"
+            />
           </div>
 
           {/* Desktop Navigation */}

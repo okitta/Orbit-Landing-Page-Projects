@@ -41,7 +41,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative max-w-lg mx-auto lg:mx-0">
               <img 
-                src="/image/background.png" 
+                src="/image/background_1.jpg" 
                 alt="Leather Crafting Workshop" 
                 className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
@@ -61,32 +61,33 @@ export default function AboutSection() {
               </p>
             </div>
 
-            {/* Core Values */}
-            <div className="grid gap-4">
-              {values.map((value, index) => (
-                <Card 
-                  key={index}
-                  className={`transition-all duration-300 cursor-pointer border-l-4 border-l-leather-accent hover:shadow-lg ${hoveredCard === index ? 'bg-leather-primary scale-105' : 'bg-leather-primary'}`}
-                  onMouseEnter={() => setHoveredCard(index)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="text-leather-brown flex-shrink-0">
-                        {value.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-leather-brown mb-1">{value.title}</h3>
-                        <p className={`text-leather-secondary transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-70'}`}>
-                          {value.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            
           </div>
+        </div>
+        {/* Core Values */}
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-3 mt-8">
+          {values.map((value, index) => (
+            <Card 
+              key={index}
+              className={`transition-all duration-300 cursor-pointer border-l-4 border-l-leather-accent hover:shadow-lg ${hoveredCard === index ? 'bg-leather-primary scale-105' : 'bg-leather-primary'}`}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 ">
+                  <div className="text-leather-brown flex-shrink-0">
+                    {value.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-leather-brown mb-1">{value.title}</h3>
+                    <p className={`text-leather-secondary transition-opacity duration-300 ${hoveredCard === index ? 'opacity-100' : 'opacity-70'}`}>
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
 

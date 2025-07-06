@@ -59,7 +59,7 @@ export default function HeroSection() {
     <section className="relative min-h-[80vh] sm:min-h-[90vh] md:min-h-screen flex items-center overflow-hidden">
       {/* Background image with gradient overlay */}
       <div className="absolute inset-0 w-full h-full">
-        <img src="/image/background.png" alt="Abrish Leather Hero" className="w-full h-full object-cover object-center" />
+        <img src="/image/background_2.jpg" alt="Abrish Leather Hero" className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-br from-leather-brown/90 via-leather-neutral/80 to-leather-secondary/80" />
       </div>
       {/* Bubbles */}
