@@ -143,7 +143,7 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-6 text-white">Product Categories</h4>
               <ul className="space-y-3">
-                {['Bridges', 'Charcoal Machines', 'Mixers', 'EVs', 'Kneading Machines'].map((service) => (
+                {['Bridges', 'Charcoal Machines', 'Mixers', 'Hybrid Vechiles', 'Kneading Machines'].map((service) => (
                   <li key={service}>
                     <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                       {service}
