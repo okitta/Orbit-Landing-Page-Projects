@@ -33,11 +33,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-charcoal' : 'text-white'
-            }`}>
-              Yared Engineering
-            </h1>
+            <img
+              src="/image/logo.png"
+              alt="Yared Engineering Logo"
+              className={`h-16 w-auto object-contain transition duration-300 ${!isScrolled ? 'filter invert brightness-0 saturate-0' : ''}`}
+            />
           </div>
 
           {/* Desktop Navigation */}
