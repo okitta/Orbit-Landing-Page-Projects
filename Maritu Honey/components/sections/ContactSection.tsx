@@ -22,8 +22,6 @@ export default function ContactSection() {
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const { toast } = useToast();
 
-
-
   const validateField = (name: string, value: string) => {
     switch (name) {
       case 'name':
@@ -127,25 +125,25 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-[#6A1B9A]/5 to-transparent relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-[#F2C84B]/10 to-[#F2A71B]/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#6A1B9A] mb-6">Let's Stay Connected</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#0D0D0D] mb-6">Let's Stay Connected</h2>
+          <p className="text-lg text-[#734C29] max-w-2xl mx-auto">
             Have questions, feedback, or want to partner with us? We'd love to hear from you. Reach out and let's connect over a jar of golden goodness.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <Card className="w-full shadow-lg">
+          <Card className="w-full shadow-lg bg-[#F2C84B]/20 border-[#D97C2B]/20">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-[#6A1B9A]">Send Us a Message</CardTitle>
+              <CardTitle className="text-2xl font-bold text-[#0D0D0D]">Send Us a Message</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name" className="text-[#734C29]">Name</Label>
                   <Input
                     id="name"
                     name="name"
@@ -153,13 +151,13 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'name' ? 'border-[#6A1B9A]' : 'border-gray-200'}`}
+                    className={`border-2 bg-[#F2C84B]/30 ${focusedField === 'name' ? 'border-[#F2A71B]' : 'border-[#D97C2B]/40'}`}
                   />
                   {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="text-[#734C29]">Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -168,13 +166,13 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'email' ? 'border-[#6A1B9A]' : 'border-gray-200'}`}
+                    className={`border-2 bg-[#F2C84B]/30 ${focusedField === 'email' ? 'border-[#F2A71B]' : 'border-[#D97C2B]/40'}`}
                   />
                   {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="text-[#734C29]">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -182,7 +180,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField(null)}
-                    className={`border-2 ${focusedField === 'message' ? 'border-[#6A1B9A]' : 'border-gray-200'}`}
+                    className={`border-2 bg-[#F2C84B]/30 ${focusedField === 'message' ? 'border-[#F2A71B]' : 'border-[#D97C2B]/40'}`}
                   />
                   {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                 </div>
@@ -190,7 +188,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#6A1B9A] hover:bg-[#8E24AA] text-white transition-colors duration-300"
+                  className="w-full bg-[#F2A71B] hover:bg-[#D97C2B] text-[#0D0D0D] transition-colors duration-300"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <MessageCircle className="ml-2 w-4 h-4" />
@@ -204,14 +202,14 @@ export default function ContactSection() {
             {/* Contact Cards */}
             <div className="grid gap-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="transform-gpu transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <Card key={index} className="transform-gpu transition-all duration-300 hover:shadow-lg hover:scale-105 bg-[#F2C84B]/20 border-[#D97C2B]/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-[#6A1B9A]">{info.icon}</div>
+                      <div className="text-[#F2A71B]">{info.icon}</div>
                       <div>
-                        <h3 className="font-semibold text-[#6A1B9A] mb-2">{info.title}</h3>
+                        <h3 className="font-semibold text-[#0D0D0D] mb-2">{info.title}</h3>
                         {info.details.map((detail, i) => (
-                          <p key={i} className="text-gray-600">{detail}</p>
+                          <p key={i} className="text-[#734C29]">{detail}</p>
                         ))}
                       </div>
                     </div>
@@ -221,9 +219,9 @@ export default function ContactSection() {
             </div>
 
             {/* Social Media Links */}
-            <Card className="transform-gpu transition-all duration-300 hover:shadow-lg">
+            <Card className="transform-gpu transition-all duration-300 hover:shadow-lg bg-[#F2C84B]/20 border-[#D97C2B]/20">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-[#6A1B9A] mb-4">Follow us on</h3>
+                <h3 className="font-semibold text-[#0D0D0D] mb-4">Follow us on</h3>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -231,7 +229,7 @@ export default function ContactSection() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-[#6A1B9A]/10 text-[#6A1B9A] hover:bg-[#6A1B9A] hover:text-white transition-all duration-300 transform hover:scale-110"
+                      className="p-3 rounded-full bg-[#F2A71B]/20 text-[#F2A71B] hover:bg-[#F2A71B] hover:text-[#0D0D0D] transition-all duration-300 transform hover:scale-110"
                     >
                       {social.icon}
                     </a>

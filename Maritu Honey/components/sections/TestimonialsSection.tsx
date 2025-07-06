@@ -68,22 +68,22 @@ export default function TestimonialsSection() {
     return Array.from({ length: 5 }, (_, index) => (
       <Star
         key={index}
-        className={`w-5 h-5 ${index < rating ? 'fill-[#FFD700] text-[#FFD700]' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${index < rating ? 'fill-[#F2A71B] text-[#F2A71B]' : 'text-[#D97C2B]/30'}`}
       />
     ));
   };
 
   return (
-    <section className="py-32 bg-primary/10 relative overflow-hidden">
+    <section className="py-32 bg-[#F2C84B]/15 relative overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#6A1B9A]/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#F2A71B]/10 to-transparent"></div>
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#0D0D0D] mb-6">
             What Our Customers Say
           </h2>
-          <p className="text-lg text-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-[#734C29] max-w-3xl mx-auto">
             Real experiences from our valued customers who trust in Maritu Honey quality
           </p>
         </div>
@@ -95,9 +95,9 @@ export default function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={prevTestimonial}
-              className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:scale-105"
+              className="rounded-full bg-[#F2C84B]/80 backdrop-blur-sm hover:bg-[#F2C84B] transition-all duration-300 hover:scale-105 border-[#D97C2B]"
             >
-              <ChevronLeft className="h-6 w-6 text-[#6A1B9A]" />
+              <ChevronLeft className="h-6 w-6 text-[#0D0D0D]" />
             </Button>
           </div>
 
@@ -106,17 +106,17 @@ export default function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={nextTestimonial}
-              className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:scale-105"
+              className="rounded-full bg-[#F2C84B]/80 backdrop-blur-sm hover:bg-[#F2C84B] transition-all duration-300 hover:scale-105 border-[#D97C2B]"
             >
-              <ChevronRight className="h-6 w-6 text-[#6A1B9A]" />
+              <ChevronRight className="h-6 w-6 text-[#0D0D0D]" />
             </Button>
           </div>
 
           {/* Main Testimonial Card */}
-          <Card className="relative bg-primary/20 backdrop-blur-sm border-2 border-primary/10 shadow-xl max-w-3xl mx-auto transform-gpu transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] rounded-2xl">
+          <Card className="relative bg-[#F2C84B]/30 backdrop-blur-sm border-2 border-[#D97C2B]/20 shadow-xl max-w-3xl mx-auto transform-gpu transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] rounded-2xl">
             <CardContent className="p-8">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-[#FFD700]/20">
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-4 ring-[#F2A71B]/30">
                   <img
                     src={testimonials[currentTestimonial].image}
                     alt={testimonials[currentTestimonial].name}
@@ -124,10 +124,10 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div className="flex gap-1 mb-4">{renderStars(testimonials[currentTestimonial].rating)}</div>
-                <blockquote className="text-xl text-gray-700 italic mb-6">
+                <blockquote className="text-xl text-[#734C29] italic mb-6">
                   "{testimonials[currentTestimonial].text}"
                 </blockquote>
-                <cite className="text-[#6A1B9A] font-semibold not-italic">
+                <cite className="text-[#0D0D0D] font-semibold not-italic">
                   — {testimonials[currentTestimonial].name}
                 </cite>
               </div>
@@ -135,10 +135,10 @@ export default function TestimonialsSection() {
           </Card>
 
           {/* Background Testimonial Cards */}
-          <Card className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[30%] transform rotate-[-12deg] opacity-20 w-full max-w-3xl pointer-events-none bg-primary/10 rounded-2xl">
+          <Card className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[30%] transform rotate-[-12deg] opacity-20 w-full max-w-3xl pointer-events-none bg-[#F2A71B]/20 rounded-2xl">
             <CardContent className="p-8 blur-sm" />
           </Card>
-          <Card className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-[30%] transform rotate-[12deg] opacity-20 w-full max-w-3xl pointer-events-none bg-primary/10 rounded-2xl">
+          <Card className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-[30%] transform rotate-[12deg] opacity-20 w-full max-w-3xl pointer-events-none bg-[#F2A71B]/20 rounded-2xl">
             <CardContent className="p-8 blur-sm" />
           </Card>
 
@@ -148,7 +148,7 @@ export default function TestimonialsSection() {
               <button
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-[#6A1B9A] w-6' : 'bg-[#6A1B9A]/20 hover:bg-[#6A1B9A]/40'}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-[#F2A71B] w-6' : 'bg-[#D97C2B]/40 hover:bg-[#D97C2B]/60'}`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
