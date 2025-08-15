@@ -9,6 +9,7 @@ interface Product {
   name: string;
   description: string;
   image: string;
+  gender: string;
 }
 
 export default function ProductsSection() {
@@ -92,8 +93,7 @@ export default function ProductsSection() {
         name: '',
         description: '',
         image: '',
-        // Optionally, add a special property to identify as placeholder if needed
-        // _placeholder: true
+        gender: '',
       });
     }
     return visible;
