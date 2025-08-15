@@ -42,7 +42,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {['Home', 'About', 'Collection', 'Testimonials', 'Contact'].map((item) => (
+            {['Home', 'About', 'Products', 'Testimonials', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -86,7 +86,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-leather-primary shadow-lg border-t">
             <nav className="px-6 py-4 space-y-4">
-              {['Home', 'About', 'Collection', 'Testimonials', 'Contact'].map((item) => (
+              {['Home', 'About', 'Products', 'Testimonials', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}

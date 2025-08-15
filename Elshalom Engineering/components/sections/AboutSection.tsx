@@ -37,12 +37,27 @@ export default function AboutSection() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Fashion Image */}
+          {/* Left: Image Grid */}
           <div className="relative">
-            <div className="relative max-w-lg mx-auto lg:mx-0">
+            <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto lg:mx-0">
               <img 
-                src="/image/product_40.jpg" 
-                alt="Elshalom Engineering Workshop" 
+                src="/image/about_us.jpg" 
+                alt="Elshalom Engineering Workshop 1" 
+                className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              />
+              <img 
+                src="/image/about_us_2.jpg" 
+                alt="Elshalom Engineering Workshop 2" 
+                className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              />
+              <img 
+                src="/image/about_us_3.jpg" 
+                alt="Elshalom Engineering Workshop 3" 
+                className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              />
+              <img 
+                src="/image/about_us_4.jpg" 
+                alt="Elshalom Engineering Workshop 4" 
                 className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary rounded-full opacity-20 animate-pulse"></div>
@@ -57,7 +72,10 @@ export default function AboutSection() {
                 Who We Are
               </h2>
               <p className="text-lg text-foreground leading-relaxed mb-8">
-                Elshalom Electro Mechanical is a leading provider of locally manufactured and customized industrial machinery for the food, agriculture, and processing sectors. With a strong foundation in innovation, we specialize in developing durable, efficient, and affordable equipment tailored to local needs. Our mission is to empower farmers, food producers, and small industries with the tools they need to grow and succeed — sustainably and reliably. We don't just build machines — we build progress.
+                Founded in 2015 in Hawassa, Ethiopia, Elshalom Electromechanical Engineering began as the ambitious dream of Mr. Gashaw Edo, a passionate technical school graduate. With a modest capital of just 27,000 birr, he set out with a clear mission: to empower local farmers and businesses with high-quality, reliable agricultural machinery. Drawing on his engineering expertise and deep understanding of the agricultural sector, Mr. Gashaw was determined to bridge the gap between traditional farming methods and modern technology.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed mb-8">
+                What started as a small venture soon grew into a respected enterprise, achieving numerous milestones along the way. Elshalom Electromechanical Engineering is now recognized not only for its innovative machinery but also for its commitment to transforming the agricultural landscape of Ethiopia, one machine at a time.
               </p>
             </div>
 

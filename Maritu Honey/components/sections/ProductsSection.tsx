@@ -19,19 +19,19 @@ export default function ProductsSection() {
     {
       name: '1kg Maritu Honey Jar',
       price: 'Premium',
-      description: "Perfect for families and bulk users, this jar ensures you'll never run out of natural sweetness.",
+      description: "Perfect for families and bulk users. Never run out of natural sweetness.",
       image: '/image/product_3.jpg'
     },
     {
       name: '500g Maritu Honey Jar',
       price: 'Popular',
-      description: 'A great balance between value and convenience, ideal for everyday use.',
+      description: 'Great balance between value and convenience. Ideal for everyday use.',
       image: '/image/product_4.jpg'
     },
     {
       name: '250g Maritu Honey Jar',
       price: 'Starter',
-      description: 'Compact and convenient — the perfect size for travel, gifting, or trying Maritu Honey for the first time.',
+      description: 'Compact and convenient. Perfect for travel, gifting, or first-time trying.',
       image: '/image/product_8.jpg'
     }
   ];
@@ -63,7 +63,7 @@ export default function ProductsSection() {
         <div className="relative">
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-500 ease-in-out mb-4"
               style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
             >
               {products.map((product, index) => (

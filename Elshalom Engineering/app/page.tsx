@@ -5,6 +5,7 @@ import Header from '@/components/sections/Header';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ProductsSection';
+import AwardsSection from '@/components/sections/AwardsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/sections/Footer';
@@ -21,6 +22,9 @@ export default function Home() {
       </section>
       <section id="services">
         <ServicesSection />
+      </section>
+      <section id="awards">
+        <AwardsSection />
       </section>
       <section id="testimonials">
         <TestimonialsSection />

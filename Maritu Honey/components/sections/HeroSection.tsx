@@ -89,14 +89,14 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight text-[#0D0D0D] flex items-center gap-3 justify-center text-center">
             <span role="img" aria-label="bee" className="text-5xl md:text-6xl lg:text-7xl">🐝</span>
-            Pure, Natural, Ethiopian – Taste the Golden Goodness of Maritu Honey
+            Pure Ethiopian Honey
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-[#0D0D0D]/90 leading-relaxed max-w-3xl mx-auto">
             From the heart of Ethiopia to your table, our honey is harvested with care and packed with nature's best.
           </p>
           <Button 
             size="lg" 
-            onClick={() => scrollToSection('products')}
+            onClick={() => window.open('https://t.me/maritu_honey', '_blank', 'noopener,noreferrer')}
             className="bg-[#734C29] hover:bg-[#0D0D0D] text-[#F2C84B] font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Shop Honey

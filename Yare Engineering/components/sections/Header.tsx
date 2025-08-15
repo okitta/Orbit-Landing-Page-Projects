@@ -46,7 +46,7 @@ export default function Header() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className={`font-medium transition-colors duration-300 hover:text-white ${
+                className={`font-medium transition-colors duration-300 hover:text-primary ${
                   isScrolled ? 'text-charcoal' : 'text-white'
                 }`}
               >

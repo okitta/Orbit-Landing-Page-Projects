@@ -76,8 +76,8 @@ export default function HeroSection() {
           }}
         />
       ))}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20 flex-1 flex flex-col items-start justify-center text-left w-full">
-        <div className="max-w-2xl ml-0 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20 flex-1 flex flex-col items-center md:items-start justify-center text-center md:text-left w-full">
+        <div className="max-w-2xl w-full mx-auto md:mx-0">
           <div className="mb-4 flex items-center gap-3">
             {/* Minimalist leather bag icon using Lucide icon, hidden on mobile */}
             <svg xmlns="http://www.w3.org/2000/svg" className="hidden sm:block w-8 h-8 sm:w-10 sm:h-10 text-leather-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="7" width="16" height="13" rx="3" strokeWidth="2"/><path d="M8 7V5a4 4 0 1 1 8 0v2" strokeWidth="2"/></svg>

@@ -105,7 +105,7 @@ export default function ProductsSection() {
         <div className="relative">
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-500 ease-in-out mb-4"
               style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
             >
               {products.map((product, index) => (

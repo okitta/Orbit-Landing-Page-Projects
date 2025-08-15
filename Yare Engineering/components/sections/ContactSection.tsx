@@ -201,7 +201,25 @@ export default function ContactSection() {
           <div className="space-y-8">
             {/* Contact Cards */}
             <div className="grid gap-6">
-              {contactInfo.map((info, index) => (
+              {/* Map Location */}
+              <Card className="transform-gpu transition-all duration-300 hover:shadow-lg">
+                <CardContent className="p-0 overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.7462!3d9.0320!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDEnNTUuMiJOIDM4wrA0NCc0Ni4zIkU!5e0!3m2!1sen!2set!4v1234567890"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Yared Engineering Location - Addis Ababa, Ethiopia"
+                    className="w-full h-48"
+                  ></iframe>
+                </CardContent>
+              </Card>
+
+              {/* Phone and Email Cards */}
+              {contactInfo.slice(1).map((info, index) => (
                 <Card key={index} className="transform-gpu transition-all duration-300 hover:shadow-lg hover:scale-105">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">

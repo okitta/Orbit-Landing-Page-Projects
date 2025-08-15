@@ -236,6 +236,26 @@ export default function ContactSection() {
 
           {/* Contact Information */}
           <div className="space-y-8">
+            {/* Map Location */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-primary mb-3">Our Location</h4>
+              <div className="w-full h-48 bg-gray-200 rounded-lg overflow-hidden border border-gray-300">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.5!3d7.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDAnMDAuMCJOIDM4wrAzMCcwMC4wIkU!5e0!3m2!1sen!2set!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Elshalom Engineering Location"
+                ></iframe>
+              </div>
+              <p className="text-sm text-foreground mt-2 text-center">
+                Tirufat in front of Admas mall, Mobile Beside Hiwot Branch church
+              </p>
+            </div>
+
             {/* Contact Cards */}
             <div className="space-y-6">
               {contactInfo.map((info, idx) => (

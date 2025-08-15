@@ -19,37 +19,37 @@ export default function ProductsSection() {
     {
       name: 'Precast Bridge Metals',
       price: '',
-      description: 'Our prefabricated bridge components are precision-engineered for quick installation, cost-effectiveness, and exceptional durability.',
+      description: 'Precision-engineered prefabricated bridge components for quick installation and exceptional durability.',
       image: '/image/product_1.jpg'
     },
     {
       name: 'Charcoal Making Machine',
       price: '',
-      description: 'Turn waste into energy. Eco-friendly biomass charcoal machines to convert organic waste into sustainable fuel sources for industries and households.',
+      description: 'Eco-friendly biomass charcoal machines that convert organic waste into sustainable fuel sources.',
       image: '/image/product_2.jpg'
     },
     {
       name: 'Bread Dough Mixer',
       price: '',
-      description: 'Mix with consistency. Dough mixers for bakeries and factories—ensuring even, fast, and high-volume production.',
-      image: '/image/product_3.jpg'
+      description: 'High-volume dough mixers ensuring consistent, fast production for bakeries and factories.',
+      image: '/image/product_3.png'
     },
     {
       name: 'Hybrid Vechiles',
       price: '',
-      description: 'Drive into the future. Affordable, efficient, and eco-conscious electric mobility options designed for cities and industries.',
+      description: 'Affordable electric mobility solutions designed for eco-conscious urban and industrial use.',
       image: '/image/product_4.jpg'
     },
     {
       name: 'Gold Wash Plant',
       price: '',
-      description: 'Efficient and reliable gold washing plant designed for maximum recovery with minimal water and energy use.',
+      description: 'Efficient gold washing plant with maximum recovery and minimal water and energy consumption.',
       image: '/image/product_5.jpg'
     },
     {
       name: 'Bread Kneading Machine',
       price: '',
-      description: 'Automated precision, bakery perfection. Optimized kneading machines for uniform dough texture and minimized manual labor.',
+      description: 'Automated kneading machines for uniform dough texture with minimal manual labor requirements.',
       image: '/image/product_15.jpg'
     }
   ];
@@ -104,7 +104,7 @@ export default function ProductsSection() {
                       <Button 
                         className="w-full bg-steelBlue hover:bg-charcoal text-white transition-colors duration-300"
                         onClick={() => {
-                          window.open('https://t.me/YaredEngineering', '_blank');
+                          window.open('https://t.me/yaredmachinary', '_blank');
                         }}
                       >
                         Order Now

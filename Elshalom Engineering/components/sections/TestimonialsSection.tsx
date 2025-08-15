@@ -24,25 +24,25 @@ export default function TestimonialsSection() {
     },
     {
       name: "Eyob G., Sidama",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_2.jpg",
       rating: 5,
       text: "Elshalom's coffee grinder changed our roasting business. The quality is unmatched."
     },
     {
       name: "Fikadu T., Bale",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_1.jpg",
       rating: 5,
       text: "The grain sorter helped us sell our crops at a better price. Very accurate."
     },
     {
       name: "Tigist M., Wolaita",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_4.jpg",
       rating: 5,
       text: "Affordable and well-built — the manure processor turned waste into profit."
     },
     {
       name: "Daniel B., Shashamane",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_3.jpg",
       rating: 5,
       text: "We've worked with many suppliers, but Elshalom's customer support really stands out"
     }

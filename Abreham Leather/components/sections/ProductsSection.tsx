@@ -18,32 +18,38 @@ export default function ProductsSection() {
     {
       name: 'Premium Leather Handbag',
       description: 'Elegant and spacious, our leather handbags are perfect for everyday essentials with a touch of luxury.',
-      image: '/image/product_1.jpg'
+      image: '/image/product_1.jpg',
+      gender: 'women'
     },
     {
-      name: "Men's Premium Leather Bags",
+      name: 'Men\'s Premium Leather Bags',
       description: 'Rugged and refined, this backpack balances function and form for the modern man on the move.',
-      image: '/image/product_2.jpg'
+      image: '/image/product_2.jpg',
+      gender: 'men'
     },
     {
       name: 'Laptop Bag',
       description: 'Sleek and structured leather laptop bag built for professionals who value both protection and presentation.',
-      image: '/image/product_3.jpg'
+      image: '/image/product_3.jpg',
+      gender: 'men'
     },
     {
-      name: "Women's Premium Leather Handbags",
-      description: "Elegant, flowy, stylish and practical, this women's hand bag is the perfect grab-and-go companion for any outing.",
-      image: '/image/product_4.jpg'
+      name: 'Women\'s Premium Leather Handbags',
+      description: 'Elegant, flowy, stylish and practical, this women\'s hand bag is the perfect grab-and-go companion for any outing.',
+      image: '/image/product_4.jpg',
+      gender: 'women'
     },
     {
-      name: 'Leather Sandals',
-      description: 'Handcrafted from genuine leather, our sandals offer a perfect blend of comfort, durability, and style — made for both men and women.',
-      image: '/image/product_5.jpg'
+      name: 'Men\'s Leather Sandals',
+      description: 'Handcrafted from genuine leather, our men\'s sandals offer a perfect blend of comfort, durability, and style.',
+      image: '/image/product_5.jpg',
+      gender: 'men'
     },
     {
-      name: 'Leather Sandals',
-      description: 'Handcrafted from genuine leather, our sandals offer a perfect blend of comfort, durability, and style — made for both men and women.',
-      image: '/image/product_7.jpg'
+      name: 'Women\'s Leather Sandals',
+      description: 'Handcrafted from genuine leather, our women\'s sandals offer a perfect blend of comfort, durability, and style.',
+      image: '/image/product_6.jpg',
+      gender: 'women'
     }
   ];
 
@@ -116,7 +122,7 @@ export default function ProductsSection() {
         <div className="relative">
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] justify-center"
+              className="flex transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] justify-center mb-4"
               style={{ transform: 'none' }}
             >
               {getVisibleProducts().map((product, index) => (
@@ -124,6 +130,18 @@ export default function ProductsSection() {
                   <div key={"product-card-" + index} className="w-full flex-shrink-0 px-1 sm:px-2 lg:px-4 max-w-[400px] min-w-[260px] sm:min-w-[320px] lg:min-w-[340px]">
                     <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform-gpu bg-leather-primary h-full flex flex-col">
                       <div className="relative aspect-[4/3] overflow-hidden">
+                        {/* Gender Tag */}
+                        <div className="absolute top-2 right-2 z-20">
+                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
+                            product.gender === 'men' 
+                              ? 'bg-blue-500 text-white' 
+                              : product.gender === 'women'
+                              ? 'bg-pink-500 text-white'
+                              : 'bg-gray-500 text-white'
+                          }`}>
+                            {product.gender === 'men' ? 'Men' : product.gender === 'women' ? 'Women' : 'Unisex'}
+                          </span>
+                        </div>
                         <img
                           src={product.image}
                           alt={product.name}

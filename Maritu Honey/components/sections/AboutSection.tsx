@@ -55,7 +55,7 @@ export default function AboutSection() {
                 About Maritu Honey
               </h2>
               <p className="text-lg text-[#734C29] leading-relaxed mb-8">
-                Maritu Honey is more than just a sweet treat — it's a story of nature, tradition, and dedication. Harvested from the rich highlands of Ethiopia, our honey is 100% pure, unprocessed, and rich in nutrients. We work closely with local beekeepers who practice ethical and sustainable harvesting methods, ensuring the bees thrive and the environment is protected. With every jar, we aim to share a piece of Ethiopia's heritage and natural wealth with the world.
+                Maritu Agroprocessing Private Enterprise is a premium honey and beeswax producer based in Hawassa, Ethiopia. The company specializes in 100% pure, forest-based organic honey, sustainably sourced from diverse regions across Ethiopia in collaboration with thousands of smallholder beekeepers. With a growing reputation for quality, traceability and ethical sourcing, Maritu is committed to meeting international market standards while promoting inclusive growth in the apiculture sector.
               </p>
             </div>
 

@@ -91,7 +91,7 @@ export default function ProductsSection() {
   };
 
   return (
-    <section className="py-24 bg-primary/10 relative">
+    <section id="products" className="py-24 bg-primary/10 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
@@ -104,7 +104,7 @@ export default function ProductsSection() {
         <div className="relative">
           <div className="overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-500 ease-in-out mb-4"
               style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
             >
               {products.map((product, index) => (
@@ -156,11 +156,10 @@ export default function ProductsSection() {
     </section>
   );
 }
-
 // Services Section as a separate component
 export function ServicesSection() {
   return (
-    <section className="py-24 bg-primary/10 relative">
+    <section id="services" className="py-24 bg-primary/10 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
@@ -218,7 +217,7 @@ export function ServicesSection() {
           </Card>
         </div>
         <div className="text-center">
-          <Button className="bg-primary hover:bg-brand-dillGreen text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <Button onClick={() => window.open('https://t.me/teyimgarment', '_blank')} className="bg-primary hover:bg-brand-dillGreen text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
             Let's Print Together
           </Button>
         </div>

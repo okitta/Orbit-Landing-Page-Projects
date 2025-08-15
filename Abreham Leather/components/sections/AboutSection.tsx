@@ -53,7 +53,7 @@ export default function AboutSection() {
           {/* Right: Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-leather-brown mb-6 leading-tight animate-text-gradient">
+              <h2 className="text-4xl lg:text-5xl font-bold text-leather-brown mb-6 leading-tight">
                 Who We Are
               </h2>
               <p className="text-lg text-leather-secondary leading-relaxed mb-8">
@@ -92,17 +92,7 @@ export default function AboutSection() {
       </div>
 
       <style jsx>{`
-        @keyframes text-gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-text-gradient {
-          background: linear-gradient(90deg, #6A1B9A 0%, #8E24AA 50%, #6A1B9A 100%);
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: text-gradient 3s ease infinite;
-        }
+        /* Removed purple gradient animation */
       `}</style>
     </section>
   );

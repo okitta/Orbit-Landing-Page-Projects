@@ -107,13 +107,6 @@ export default function ContactSection() {
 
   const contactInfo = [
     {
-      icon: <MapPin className="w-5 h-5" />,
-      title: "Visit us",
-      details: [
-        "Hawassa beside Addis ketema highschool"
-      ]
-    },
-    {
       icon: <Phone className="w-5 h-5" />,
       title: "Call us",
       details: [
@@ -226,7 +219,24 @@ export default function ContactSection() {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6">
+            {/* Google Maps Embed */}
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-leather-brown mb-4">Our Location</h3>
+              <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.5!3d7.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDMnMDAuMCJOIDM4wrAzMCcwMC4wIkU!5e0!3m2!1sen!2set!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Abrish Leather Location"
+                ></iframe>
+              </div>
+            </div>
+            
             {/* Contact Cards */}
             <div className="grid gap-6">
               {contactInfo.map((info, index) => (

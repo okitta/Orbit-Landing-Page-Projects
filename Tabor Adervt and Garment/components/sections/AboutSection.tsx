@@ -57,7 +57,7 @@ export default function AboutSection() {
                 More Than Just Prints—We Build Brands.
               </h2>
               <p className="text-lg text-black leading-relaxed mb-8">
-                Tabor Advert is a full-service apparel and print production company based in [insert location]. With a strong foothold in garment creation and modern printing technology, we're your one-stop partner for bringing bold ideas to life. Whether it's custom t-shirts, banners, or branded gift products—we deliver quality that wears well and speaks louder.<br/><br/>
+                Tabor Advert is a full-service apparel and print production company based in Hawassa, Ethiopia. With a strong foothold in garment creation and modern printing technology, we're your one-stop partner for bringing bold ideas to life. Whether it's custom t-shirts, banners, or branded gift products—we deliver quality that wears well and speaks louder.<br/><br/>
                 We take pride in our dedicated Garment House, where creativity meets craftsmanship to produce custom shirts and jerseys tailored for businesses, events, and individuals who value uniqueness.
               </p>
             </div>

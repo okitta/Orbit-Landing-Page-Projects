@@ -18,19 +18,19 @@ export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
     {
       name: "Samuel T. – Addis Ababa",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_2.jpg",
       rating: 5,
       text: "We ordered a bridge component from Yared Engineering and were impressed with the precision and on-time delivery. Highly recommended."
     },
     {
       name: "Meseret B. – Hawassa",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_3.jpg",
       rating: 5,
       text: "The bread mixer we got has transformed our bakery production. It's strong, consistent, and efficient!"
     },
     {
       name: "Daniel M. – Mekelle",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_1.jpg",
       rating: 5,
       text: "Their charcoal machine is not only efficient but has helped us become more sustainable as a company."
     },
@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
     },
     {
       name: "Abel Y. – Adama",
-      image: "/image/testimonial.png",
+      image: "/image/testimonial_4.jpg",
       rating: 5,
       text: "Reliable engineering and modern technology in one place. Their EVs are top-notch for urban mobility."
     }

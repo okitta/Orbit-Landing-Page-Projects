@@ -40,11 +40,37 @@ export default function AboutSection() {
           {/* Left: Fashion Image */}
           <div className="relative">
             <div className="relative max-w-lg mx-auto lg:mx-0">
-              <img 
-                src="/image/product_9.jpg" 
-                alt="Yared Engineering team or machinery in action" 
-                className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
-              />
+              {/* Image Grid - 2x2 layout */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative">
+                  <img 
+                    src="/image/about_us_1.jpg" 
+                    alt="Yared Engineering team or machinery in action" 
+                    className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="relative">
+                  <img 
+                    src="/image/about_us_3.jpg" 
+                    alt="Yared Engineering team or machinery in action" 
+                    className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="relative">
+                  <img 
+                    src="/image/about_us_2.jpg" 
+                    alt="Yared Engineering team or machinery in action" 
+                    className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="relative">
+                  <img 
+                    src="/image/about_us_4.jpg" 
+                    alt="Yared Engineering team or machinery in action" 
+                    className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-steelBlue rounded-full opacity-10 animate-pulse delay-1000"></div>
             </div>
